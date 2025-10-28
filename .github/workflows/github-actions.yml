@@ -1,8 +1,6 @@
 name: Unity CI - Tests et Documentation
 
-on:
-  push:
-    branches: [ Develop ]
+on: [push]
 
 jobs:
   test:
