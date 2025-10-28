@@ -1,1 +1,20 @@
+name: Unity CI - Tests et Documentation
 
+on:
+  push:
+    branches: [ Develop ]
+
+jobs:
+  test:
+    name: Test project
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Récupère le code Unity
+        uses: actions/checkout@v5
+
+      - name: Test Unity
+        uses: game-ci/unity-test-runner@v4
+        with:
+          unityVersion: 6000.0.60f1
+          testMode: all
