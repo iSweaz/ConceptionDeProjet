@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Récupère le code Unity
         uses: actions/checkout@v5
+        with:
+          unityVersion: 6000.0.60f1
+          personalLicense: true
 
       - name: Test Unity
         uses: game-ci/unity-test-runner@v4
