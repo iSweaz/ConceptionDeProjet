@@ -1,30 +1,20 @@
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
-using System.Threading.Tasks;
-using System;
 using UnityEditor;
 
-
-[System.Serializable]
-public class userStoryData
-{
-    public string name;
-    public string description;
-}
-
-[System.Serializable]
-public class UserStorys
-{
-    public userStoryData[] deck;
-}
+//Plugin
+using SimpleFileBrowser;
+using System.Collections;
 
 public class JSON_Manager : MonoBehaviour
 {
     // public TextAsset textFile;
+    private deck deck;
     private Button button;
-    [SerializeField]
-    private userStoryData[] datas;
+    public deck.UserStorys US;
+    
+    private bool isDialogOpen = false;
 
     void Start()
     {
@@ -37,37 +27,64 @@ public class JSON_Manager : MonoBehaviour
     /// </summary>
     private void OpenFile()
     {
-        string[] filters = { "JSON files", "json" };
-        string path = EditorUtility.OpenFilePanelWithFilters("Choose a deck", "", filters);
-        datas = SetDeck(path);
-        Debug.Log(datas);
+
+#if UNITY_EDITOR_WIN
+        // string[] filters = { "JSON files", "json" };
+        // string path = EditorUtility.OpenFilePanelWithFilters("Choose a deck", "", filters);
+        // datas = SetDeck(path);
+        // Debug.Log(path);
+        if(!isDialogOpen)
+            StartCoroutine(ShowLoadDialogCoroutine());
+
+#else
+        StartCoroutine(ShowLoadDialogCoroutine());
+#endif
     }
+    
+    private IEnumerator ShowLoadDialogCoroutine()
+    {
+        isDialogOpen = true;
+        FileBrowser.SetFilters(false, new FileBrowser.Filter("JSON files", ".json"));
+        yield return FileBrowser.WaitForLoadDialog(FileBrowser.PickMode.Files, false, null, null, "Choose a deck", "Load");
+
+        if (FileBrowser.Success)
+        {
+            string path = FileBrowser.Result[0].Trim().Replace("\\", "/");
+            Debug.Log(path);
+            string json = File.ReadAllText(path);
+            Debug.Log("JSON Content:\n" + json);
+
+            if (File.Exists(path))
+            {
+                US = SetDeck(path);
+                Debug.Log("JSON loaded successfully");
+            }
+            else
+            {
+                Debug.LogError("File not found: " + path);
+            }
+        }
+        isDialogOpen = false;
+    }
+
 
     /// <summary>
-    /// Permet de choisir le fichier JSON à inspecter.
+    /// Permet de charger un deck depuis un fichier JSON.
     /// </summary>
-    /// <param name="path"> Chemin du fichier JSON pour importer le deck</param>
-    /// <returns>Retourne le contenue du deck.</returns>
-    protected userStoryData[] SetDeck(string path)
+    /// <param name="path">Chemin du fichier JSON.</param>
+    /// <returns>Tableau des userStoryData contenus dans le deck.</returns>
+    protected deck.UserStorys SetDeck(string path)
     {
-        if (path.Length == 0)
+        if (string.IsNullOrEmpty(path))
             return null;
-        UserStorys uSList = JsonUtility.FromJson<UserStorys>(File.ReadAllText(path)); //File.ReadAllText() is necesseary beaucause i give a path rather than a file 
-        userStoryData[] datas = new userStoryData[uSList.deck.Length];
 
-        for (int i = 0; i < datas.Length; i++)
-        {
-            datas[i] = new userStoryData
-            {
-                name = uSList.deck[i].name,
-                description = uSList.deck[i].description
-            };
-        }
-        return datas;
+        string json = File.ReadAllText(path);
+
+        return JsonUtility.FromJson<deck.UserStorys>(json);
     }
 
-    public userStoryData[] GetDeck()
+    public deck.UserStorys GetDeck()
     {
-        return datas;
+        return US;
     }
 }
