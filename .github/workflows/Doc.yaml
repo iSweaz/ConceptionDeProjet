@@ -1,0 +1,30 @@
+name: Génération Doc Doxygen
+
+on: 
+  push: 
+    branches: [Actions-CI]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test project
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Récupère le code Unity
+        uses: actions/checkout@v5
+
+      - name: Install Doxygen
+        run: sudo apt-get install doxygen -y
+
+      - name: Install Dot
+        run: sudo apt-get install graphviz -y
+
+      - name: Generate Documentation
+        run: doxygen Assets/docConfig
+
+      - name: Deploy Documentation
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: Assets/html

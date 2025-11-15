@@ -1,8 +1,9 @@
-name: Unity CI - Tests et Documentation
+name: Tests unitaires Unity
 
 on: 
   push: 
     branches: [Actions-CI]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -12,12 +13,21 @@ jobs:
     steps:
       - name: Récupère le code Unity
         uses: actions/checkout@v5
+
+      - name: Activer licence
+        uses: game-ci/unity-activate@v2 
         with:
           unityVersion: 6000.0.60f1
           personalLicense: true
+          email: ${{ secrets.UNITY_EMAIL }} 
+          password: ${{ secrets.UNITY_PASSWORD }}
 
-      - name: Test Unity
+      - name: Run Test Unity
         uses: game-ci/unity-test-runner@v4
         with:
           unityVersion: 6000.0.60f1
           testMode: all
+
+      - name: Return Unity License
+        if: always()
+        uses: game-ci/unity-return-license@v2
