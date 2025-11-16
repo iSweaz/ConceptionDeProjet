@@ -3,7 +3,6 @@ name: Génération Doc Doxygen
 on: 
   push: 
     branches: [Actions-CI]
-  workflow_dispatch:
 
 jobs:
   test:
