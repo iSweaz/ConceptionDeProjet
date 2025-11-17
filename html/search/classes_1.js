@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_0',['Readme',['../classReadme.html',1,'']]],
-  ['readmeeditor_1',['ReadmeEditor',['../classReadmeEditor.html',1,'']]]
+  ['section_0',['Section',['../classReadme_1_1Section.html',1,'Readme']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['json_5fmanager_0',['JSON_Manager',['../classJSON__Manager.html',1,'']]]
+  ['readme_0',['Readme',['../classReadme.html',1,'']]],
+  ['readmeeditor_1',['ReadmeEditor',['../classReadmeEditor.html',1,'']]]
 ];

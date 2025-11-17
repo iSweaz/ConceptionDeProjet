@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['onheadergui_0',['OnHeaderGUI',['../classReadmeEditor.html#a8f6d7cabe2f32d56480a70430df63c3f',1,'ReadmeEditor']]],
-  ['oninspectorgui_1',['OnInspectorGUI',['../classReadmeEditor.html#a6e7c6fc0a5e4781a0500de4498cd2b68',1,'ReadmeEditor']]]
+  ['url_0',['url',['../classReadme_1_1Section.html#add7e4ec0d0b73f06cb6f96322da2ad31',1,'Readme::Section']]]
 ];

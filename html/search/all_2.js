@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getdeck_0',['GetDeck',['../classJSON__Manager.html#a284b4ab99acebc550454d44e57b7316f',1,'JSON_Manager']]]
+  ['icon_0',['icon',['../classReadme.html#afb1dac08d4516f9bb4b60c403a31cb68',1,'Readme']]]
 ];

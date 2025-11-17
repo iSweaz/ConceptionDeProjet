@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['section_0',['Section',['../classReadme_1_1Section.html',1,'Readme']]]
+  ['timer_0',['Timer',['../classTimer.html',1,'']]]
 ];
