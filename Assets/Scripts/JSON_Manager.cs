@@ -16,7 +16,7 @@ public class userStoryData
 [System.Serializable]
 public class UserStorys
 {
-    public userStoryData[] deck;
+    public userStoryData[] US;
 }
 
 public class JSON_Manager : MonoBehaviour
@@ -26,7 +26,6 @@ public class JSON_Manager : MonoBehaviour
     [SerializeField]
     private UserStorys datas;
 
-    [SerializeField]
     private Manager gameManager;
 
     void Start()
@@ -45,9 +44,7 @@ public class JSON_Manager : MonoBehaviour
         string path = EditorUtility.OpenFilePanelWithFilters("Choose a deck", "", filters);
         datas = SetDeck(path);
 
-        gameManager.deck = datas; 
-        GameObject Parent = transform.parent.gameObject;
-        Destroy(Parent);
+        SendToManager();
     }
 
     /// <summary>
@@ -60,17 +57,17 @@ public class JSON_Manager : MonoBehaviour
         if (path.Length == 0)
             return null;
         UserStorys uSList = JsonUtility.FromJson<UserStorys>(File.ReadAllText(path)); //File.ReadAllText() is necesseary beaucause i give a path rather than a file 
-        userStoryData[] deck = new userStoryData[uSList.deck.Length];
+        userStoryData[] deck = new userStoryData[uSList.US.Length];
 
         for (int i = 0; i < deck.Length; i++)
         {
             deck[i] = new userStoryData
             {
-                name = uSList.deck[i].name,
-                description = uSList.deck[i].description
+                name = uSList.US[i].name,
+                description = uSList.US[i].description
             };
         }
-        uSList.deck = deck;
+        uSList.US = deck;
         return uSList;
     }
 
@@ -87,4 +84,18 @@ public class JSON_Manager : MonoBehaviour
         }
         return null;
     }
+
+    /// <summary>
+    /// Fonction temporaire en attendant la session ? 
+    /// </summary>
+    public void SendToManager()
+    {
+        GameObject tmp = new GameObject("Manager");
+        gameManager = tmp.AddComponent<Manager>();
+        
+        gameManager.deck = datas; 
+        GameObject Parent = transform.parent.gameObject;
+        Destroy(Parent);
+    }
+
 }
