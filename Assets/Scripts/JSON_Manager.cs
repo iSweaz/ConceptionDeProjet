@@ -24,12 +24,16 @@ public class JSON_Manager : MonoBehaviour
     // public TextAsset textFile;
     private Button button;
     [SerializeField]
-    private userStoryData[] datas;
+    private UserStorys datas;
+
+    [SerializeField]
+    private Manager gameManager;
 
     void Start()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(OpenFile);
+
     }
 
     /// <summary>
@@ -40,7 +44,10 @@ public class JSON_Manager : MonoBehaviour
         string[] filters = { "JSON files", "json" };
         string path = EditorUtility.OpenFilePanelWithFilters("Choose a deck", "", filters);
         datas = SetDeck(path);
-        Debug.Log(datas);
+
+        gameManager.deck = datas; 
+        GameObject Parent = transform.parent.gameObject;
+        Destroy(Parent);
     }
 
     /// <summary>
@@ -48,26 +55,36 @@ public class JSON_Manager : MonoBehaviour
     /// </summary>
     /// <param name="path"> Chemin du fichier JSON pour importer le deck</param>
     /// <returns>Retourne le contenue du deck.</returns>
-    protected userStoryData[] SetDeck(string path)
+    protected UserStorys SetDeck(string path)
     {
         if (path.Length == 0)
             return null;
         UserStorys uSList = JsonUtility.FromJson<UserStorys>(File.ReadAllText(path)); //File.ReadAllText() is necesseary beaucause i give a path rather than a file 
-        userStoryData[] datas = new userStoryData[uSList.deck.Length];
+        userStoryData[] deck = new userStoryData[uSList.deck.Length];
 
-        for (int i = 0; i < datas.Length; i++)
+        for (int i = 0; i < deck.Length; i++)
         {
-            datas[i] = new userStoryData
+            deck[i] = new userStoryData
             {
                 name = uSList.deck[i].name,
                 description = uSList.deck[i].description
             };
         }
-        return datas;
+        uSList.deck = deck;
+        return uSList;
     }
 
-    public userStoryData[] GetDeck()
+    public UserStorys GetDeck()
     {
-        return datas;
+        Debug.Log("GetDeck");
+        if(datas != null)
+        {
+            //temp
+            GameObject parent = transform.parent.gameObject;
+            parent.SetActive(false);
+            
+            return datas;
+        }
+        return null;
     }
 }
