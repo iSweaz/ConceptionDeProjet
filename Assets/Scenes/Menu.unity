@@ -2129,7 +2129,7 @@ GameObject:
   - component: {fileID: 1222785562}
   - component: {fileID: 1222785561}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Pseudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2433,7 +2433,7 @@ GameObject:
   - component: {fileID: 1302294395}
   - component: {fileID: 1302294394}
   m_Layer: 5
-  m_Name: InputField (TMP) (2)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3295,6 +3295,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1795525409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795525411}
+  - component: {fileID: 1795525410}
+  m_Layer: 0
+  m_Name: instance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1795525410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795525409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e64742cf32c3c40bdb458fa0714bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1795525411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795525409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.018005, y: -2.664247, z: 11.560369}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1961173396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,7 +3352,7 @@ GameObject:
   - component: {fileID: 1961173399}
   - component: {fileID: 1961173398}
   m_Layer: 5
-  m_Name: InputField (TMP) (1)
+  m_Name: Size
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3690,3 +3734,4 @@ SceneRoots:
   - {fileID: 353866147}
   - {fileID: 996329335}
   - {fileID: 1478368873}
+  - {fileID: 1795525411}
