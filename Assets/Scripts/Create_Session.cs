@@ -1,26 +1,29 @@
 using TMPro;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class Create_Session : MonoBehaviour
 {
-    private Button button;
-    private TMP_InputField[] inputs;
-    private TMP_Dropdown mode;
-    private TMP_InputField pseudo,SizeSession,time;
-    private Singleton instance = Singleton.instance;
+    [SerializeField]   private Button button;
+    [SerializeField]   private TMP_InputField[] inputs;
+    [SerializeField]   private TMP_Dropdown mode;
+    [SerializeField]   private TMP_InputField pseudo,SizeSession,time;
+    [SerializeField]   private Singleton instance;
 
     void Start()
     {
-        button = GetComponent<Button>();
+        button = GetComponentInChildren<Button>();
         button.onClick.AddListener(Load);
 
-        mode = GetComponent<TMP_Dropdown>();
+        mode = GetComponentInChildren<TMP_Dropdown>();
 
-        inputs = GetComponents<TMP_InputField>();
+        inputs = GetComponentsInChildren<TMP_InputField>();
+
         pseudo =        inputs[0];
         SizeSession =   inputs[1];
         time =          inputs[2];
+        instance = Singleton.instance;
     }
 
     void Load()
@@ -29,6 +32,11 @@ public class Create_Session : MonoBehaviour
         instance.time =  float.Parse(time.text);
         SetModeValue();
         instance.Players.Add(pseudo.text);
+
+        Debug.Log(instance.time);
+        Debug.Log(instance.numParticipants);
+        Debug.Log(instance.mode);
+        Debug.Log(instance.Players[0]);
     }
 
     void SetModeValue()

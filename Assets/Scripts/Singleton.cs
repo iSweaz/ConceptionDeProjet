@@ -23,6 +23,8 @@ public class Singleton : MonoBehaviour
 
     private void Awake()
     {
+        Players = new List<string>();
+
         if(instance !=null && instance!= this)
             Destroy(this);
         else

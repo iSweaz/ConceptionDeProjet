@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 31562894}
   - component: {fileID: 31562893}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1338,8 +1338,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1477,6 +1477,7 @@ GameObject:
   - component: {fileID: 996329334}
   - component: {fileID: 996329333}
   - component: {fileID: 996329332}
+  - component: {fileID: 996329336}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1572,6 +1573,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &996329336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996329331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74900572d7d18c6408481314708a3d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1051412230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,7 +3319,7 @@ GameObject:
   - component: {fileID: 1795525411}
   - component: {fileID: 1795525410}
   m_Layer: 0
-  m_Name: instance
+  m_Name: Singleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
