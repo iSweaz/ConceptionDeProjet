@@ -1,0 +1,13 @@
+{
+    "US": 
+    [
+        {
+            "name": "Create procedural mob",
+            "description": "Generate procedural cloth for thes mobs"
+        },
+        {
+            "name": "Sword style",
+            "description": "implement sword animations"
+        }
+    ]
+}
