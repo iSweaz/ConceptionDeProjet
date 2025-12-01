@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['heading_0',['heading',['../classReadme_1_1Section.html#a9a4437c2b9891dec98d2e569051abd77',1,'Readme::Section']]]
+  ['allextensionshavesinglesuffix_0',['allExtensionsHaveSingleSuffix',['../classSimpleFileBrowser_1_1FileBrowser_1_1Filter.html#a11954f4ea610a343ca850cd04157fbd6',1,'SimpleFileBrowser::FileBrowser::Filter']]],
+  ['answer_1',['answer',['../classSelection.html#ae9e1d1b41adb9c476940230def9d93e6',1,'Selection']]],
+  ['attributes_2',['Attributes',['../structSimpleFileBrowser_1_1FileSystemEntry.html#a75e45a17b6a9ee6b78ddaf2d13fc220e',1,'SimpleFileBrowser::FileSystemEntry']]]
 ];

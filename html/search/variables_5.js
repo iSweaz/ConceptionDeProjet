@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['url_0',['url',['../classReadme_1_1Section.html#add7e4ec0d0b73f06cb6f96322da2ad31',1,'Readme::Section']]]
+  ['icon_0',['icon',['../structSimpleFileBrowser_1_1FiletypeIcon.html#a6a21a43685212880e29dd8f05186b5b9',1,'SimpleFileBrowser::FiletypeIcon']]]
 ];

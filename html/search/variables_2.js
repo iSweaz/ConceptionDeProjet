@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['linktext_0',['linkText',['../classReadme_1_1Section.html#a2b8565a637dd65de08e5d8631d360178',1,'Readme::Section']]],
-  ['loadedlayout_1',['loadedLayout',['../classReadme.html#a4ac0c7dc3f5e6ec524c5a4168ddede40',1,'Readme']]]
+  ['deck_0',['deck',['../classDisplay__Unit.html#a33cb1b00397724576b1e366a73339af1',1,'Display_Unit.deck'],['../classManager.html#a915133c659a938420700e2f4e9af20e1',1,'Manager.deck']]],
+  ['defaultextension_1',['defaultExtension',['../classSimpleFileBrowser_1_1FileBrowser_1_1Filter.html#ac77ad7d32412a3f52126be8f6d426992',1,'SimpleFileBrowser::FileBrowser::Filter']]],
+  ['desc_2',['desc',['../classUSData.html#a3f895cabbe92985e2e111ef839704479',1,'USData']]],
+  ['description_3',['description',['../classuserStoryData.html#aeefabc870337bf969b9783ff210edb86',1,'userStoryData.description'],['../classdeck_1_1userStoryData.html#a8ce85b163c4addcfd033d5bf4a810bdb',1,'deck.userStoryData.description']]]
 ];

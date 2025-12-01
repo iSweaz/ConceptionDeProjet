@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['onheadergui_0',['OnHeaderGUI',['../classReadmeEditor.html#a8f6d7cabe2f32d56480a70430df63c3f',1,'ReadmeEditor']]],
-  ['oninspectorgui_1',['OnInspectorGUI',['../classReadmeEditor.html#a6e7c6fc0a5e4781a0500de4498cd2b68',1,'ReadmeEditor']]]
+  ['changecolor_0',['ChangeColor',['../classSelection.html#a5342864f3d1aaa66b1c2f99eb02db194',1,'Selection']]],
+  ['changedisplay_1',['ChangeDisplay',['../classDisplay__Unit.html#a921ce51a54ec483bfe8c0c8ac25332cb',1,'Display_Unit']]],
+  ['checkpermission_2',['CheckPermission',['../classSimpleFileBrowser_1_1FileBrowser.html#ae2d9411fc64243cefe665213f4a57f9e',1,'SimpleFileBrowser::FileBrowser']]],
+  ['clearquicklinks_3',['ClearQuickLinks',['../classSimpleFileBrowser_1_1FileBrowser.html#aa9a795316c24de3cafe907ff96f02498',1,'SimpleFileBrowser::FileBrowser']]],
+  ['createitem_4',['createitem',['../interfaceSimpleFileBrowser_1_1IListViewAdapter.html#a881ae9156db9a8e68867eb7bb531e679',1,'SimpleFileBrowser.IListViewAdapter.CreateItem()'],['../classMB__JSonTester.html#a350d0d1bd7c81087cd48c53f970d7337',1,'MB_JSonTester.CreateItem()']]],
+  ['createnewfolder_5',['CreateNewFolder',['../classSimpleFileBrowser_1_1FileBrowser.html#ae4ac480aa538309e1a1dedb993f804ef',1,'SimpleFileBrowser::FileBrowser']]]
 ];

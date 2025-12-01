@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['matchesextension_0',['MatchesExtension',['../classSimpleFileBrowser_1_1FileBrowser_1_1Filter.html#af7cc32ab4e5adb333bcca64cabd83df3',1,'SimpleFileBrowser::FileBrowser::Filter']]]
+];

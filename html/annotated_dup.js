@@ -1,6 +1,45 @@
 var annotated_dup =
 [
-    [ "Readme", "classReadme.html", "classReadme" ],
-    [ "ReadmeEditor", "classReadmeEditor.html", "classReadmeEditor" ],
-    [ "Timer", "classTimer.html", "classTimer" ]
+    [ "SFB", "namespaceSFB.html", [
+      [ "ExtensionFilter", "structSFB_1_1ExtensionFilter.html", "structSFB_1_1ExtensionFilter" ],
+      [ "IStandaloneFileBrowser", "interfaceSFB_1_1IStandaloneFileBrowser.html", "interfaceSFB_1_1IStandaloneFileBrowser" ],
+      [ "StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ]
+    ] ],
+    [ "SimpleFileBrowser", "namespaceSimpleFileBrowser.html", [
+      [ "EventSystemHandler", "classSimpleFileBrowser_1_1EventSystemHandler.html", null ],
+      [ "FileBrowser", "classSimpleFileBrowser_1_1FileBrowser.html", "classSimpleFileBrowser_1_1FileBrowser" ],
+      [ "FileBrowserAccessRestrictedPanel", "classSimpleFileBrowser_1_1FileBrowserAccessRestrictedPanel.html", null ],
+      [ "FileBrowserContextMenu", "classSimpleFileBrowser_1_1FileBrowserContextMenu.html", null ],
+      [ "FileBrowserCursorHandler", "classSimpleFileBrowser_1_1FileBrowserCursorHandler.html", null ],
+      [ "FileBrowserFileOperationConfirmationPanel", "classSimpleFileBrowser_1_1FileBrowserFileOperationConfirmationPanel.html", "classSimpleFileBrowser_1_1FileBrowserFileOperationConfirmationPanel" ],
+      [ "FileBrowserItem", "classSimpleFileBrowser_1_1FileBrowserItem.html", "classSimpleFileBrowser_1_1FileBrowserItem" ],
+      [ "FileBrowserMovement", "classSimpleFileBrowser_1_1FileBrowserMovement.html", "classSimpleFileBrowser_1_1FileBrowserMovement" ],
+      [ "FileBrowserQuickLink", "classSimpleFileBrowser_1_1FileBrowserQuickLink.html", "classSimpleFileBrowser_1_1FileBrowserQuickLink" ],
+      [ "FileBrowserRenamedItem", "classSimpleFileBrowser_1_1FileBrowserRenamedItem.html", "classSimpleFileBrowser_1_1FileBrowserRenamedItem" ],
+      [ "FileSystemEntry", "structSimpleFileBrowser_1_1FileSystemEntry.html", "structSimpleFileBrowser_1_1FileSystemEntry" ],
+      [ "FiletypeIcon", "structSimpleFileBrowser_1_1FiletypeIcon.html", "structSimpleFileBrowser_1_1FiletypeIcon" ],
+      [ "IListViewAdapter", "interfaceSimpleFileBrowser_1_1IListViewAdapter.html", "interfaceSimpleFileBrowser_1_1IListViewAdapter" ],
+      [ "ListItem", "classSimpleFileBrowser_1_1ListItem.html", "classSimpleFileBrowser_1_1ListItem" ],
+      [ "NonDrawingGraphic", "classSimpleFileBrowser_1_1NonDrawingGraphic.html", "classSimpleFileBrowser_1_1NonDrawingGraphic" ],
+      [ "RecycledListView", "classSimpleFileBrowser_1_1RecycledListView.html", "classSimpleFileBrowser_1_1RecycledListView" ],
+      [ "UISkin", "classSimpleFileBrowser_1_1UISkin.html", "classSimpleFileBrowser_1_1UISkin" ]
+    ] ],
+    [ "BasicSample", "classBasicSample.html", "classBasicSample" ],
+    [ "CanvasSampleOpenFileImage", "classCanvasSampleOpenFileImage.html", "classCanvasSampleOpenFileImage" ],
+    [ "CanvasSampleOpenFileText", "classCanvasSampleOpenFileText.html", "classCanvasSampleOpenFileText" ],
+    [ "CanvasSampleOpenFileTextMultiple", "classCanvasSampleOpenFileTextMultiple.html", "classCanvasSampleOpenFileTextMultiple" ],
+    [ "CanvasSampleSaveFileImage", "classCanvasSampleSaveFileImage.html", "classCanvasSampleSaveFileImage" ],
+    [ "CanvasSampleSaveFileText", "classCanvasSampleSaveFileText.html", "classCanvasSampleSaveFileText" ],
+    [ "Create_JSON", "classCreate__JSON.html", null ],
+    [ "deck", "classdeck.html", "classdeck" ],
+    [ "Display_Unit", "classDisplay__Unit.html", "classDisplay__Unit" ],
+    [ "JSON_Manager", "classJSON__Manager.html", "classJSON__Manager" ],
+    [ "Manager", "classManager.html", "classManager" ],
+    [ "MB_JSonTester", "classMB__JSonTester.html", "classMB__JSonTester" ],
+    [ "Selection", "classSelection.html", "classSelection" ],
+    [ "Timer", "classTimer.html", "classTimer" ],
+    [ "USData", "classUSData.html", "classUSData" ],
+    [ "userStoryData", "classuserStoryData.html", "classuserStoryData" ],
+    [ "UserStorys", "classUserStorys.html", "classUserStorys" ],
+    [ "USJsonFile", "classUSJsonFile.html", "classUSJsonFile" ]
 ];

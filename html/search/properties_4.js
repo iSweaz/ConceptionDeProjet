@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['filealternatingbackgroundcolor_0',['FileAlternatingBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#afc76426e2dbbecd247e83d5a68720b83',1,'SimpleFileBrowser::UISkin']]],
+  ['fileheight_1',['FileHeight',['../classSimpleFileBrowser_1_1UISkin.html#a435ec02851e2698dc2c0cb483ce8c527',1,'SimpleFileBrowser::UISkin']]],
+  ['filehoveredbackgroundcolor_2',['FileHoveredBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#a9e68692e1da4e991baf9795e83ab8a82',1,'SimpleFileBrowser::UISkin']]],
+  ['fileiconspadding_3',['FileIconsPadding',['../classSimpleFileBrowser_1_1UISkin.html#a453419fb945d5f8e59607f411f8ca2f5',1,'SimpleFileBrowser::UISkin']]],
+  ['filemultiselectiontoggleofficon_4',['FileMultiSelectionToggleOffIcon',['../classSimpleFileBrowser_1_1UISkin.html#ab86f38995e6d082c1acdf7ba05a8672d',1,'SimpleFileBrowser::UISkin']]],
+  ['filemultiselectiontoggleonicon_5',['FileMultiSelectionToggleOnIcon',['../classSimpleFileBrowser_1_1UISkin.html#add80b845fc960200e615ab581f8189b8',1,'SimpleFileBrowser::UISkin']]],
+  ['filenormalbackgroundcolor_6',['FileNormalBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#af00495fe1bc8fc391ff13cee53914625',1,'SimpleFileBrowser::UISkin']]],
+  ['filenormaltextcolor_7',['FileNormalTextColor',['../classSimpleFileBrowser_1_1UISkin.html#af3a6961db46431148a9670ec1967eb39',1,'SimpleFileBrowser::UISkin']]],
+  ['fileselectedbackgroundcolor_8',['FileSelectedBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#a73c276efd80a2f2118183187f0be52d8',1,'SimpleFileBrowser::UISkin']]],
+  ['fileselectedtextcolor_9',['FileSelectedTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a42fe3c8ed8ead9fd42e741f4a7bd638d',1,'SimpleFileBrowser::UISkin']]],
+  ['fileslistcolor_10',['FilesListColor',['../classSimpleFileBrowser_1_1UISkin.html#a420ddd8613e5dfd3d737ce449696e1c0',1,'SimpleFileBrowser::UISkin']]],
+  ['filesverticalseparatorcolor_11',['FilesVerticalSeparatorColor',['../classSimpleFileBrowser_1_1UISkin.html#ac86549a91c97165a173306bb726bf78d',1,'SimpleFileBrowser::UISkin']]],
+  ['filetypeicons_12',['FiletypeIcons',['../classSimpleFileBrowser_1_1UISkin.html#a43df8162c05b514690b0457aa75774e0',1,'SimpleFileBrowser::UISkin']]],
+  ['foldericon_13',['FolderIcon',['../classSimpleFileBrowser_1_1UISkin.html#adda79504505dd1b418b2867c2aefcf46',1,'SimpleFileBrowser::UISkin']]],
+  ['foldersfiltertext_14',['FoldersFilterText',['../classSimpleFileBrowser_1_1FileBrowser.html#a6ca8e75c1970c7d6b8bca39900454bae',1,'SimpleFileBrowser::FileBrowser']]],
+  ['font_15',['Font',['../classSimpleFileBrowser_1_1UISkin.html#a3ccffd7908509ae19f70fbb0850400ec',1,'SimpleFileBrowser::UISkin']]],
+  ['fontsize_16',['FontSize',['../classSimpleFileBrowser_1_1UISkin.html#a3fdbe4e99f9fcc651fec7dd48711d986',1,'SimpleFileBrowser::UISkin']]]
+];
