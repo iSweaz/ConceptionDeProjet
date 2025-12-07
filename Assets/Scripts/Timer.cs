@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 120;
     public bool timerIsRunning = true;
 
-    TMP_Text timeText;
+    public TMP_Text timeText;
 
     void Start()
     {

@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 /// <summary>
@@ -18,6 +19,7 @@ public class USData
 public class USJsonFile
 {
     public string title;
+    [JsonIgnore] public string filePath; // Path du fichier, non sauvegardé dans le JSON
     public List<USData> usdata_list;
 
     public USJsonFile()

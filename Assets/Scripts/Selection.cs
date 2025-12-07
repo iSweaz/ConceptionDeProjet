@@ -3,7 +3,7 @@ using UnityEngine;
 public class Selection : MonoBehaviour
 {
     Camera cam;
-    public string answer ="i";
+    public string answer = "i";
 
     private GameObject lastObject;
     private Renderer m_ObjectRenderer;
@@ -14,7 +14,7 @@ public class Selection : MonoBehaviour
 
     }
 
-    void  Update()
+    void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {

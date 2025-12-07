@@ -23,8 +23,8 @@ public class JSON_Manager : MonoBehaviour
 {
     // public TextAsset textFile;
     private Button button;
-    [SerializeField]
-    private UserStorys datas;
+    //private UserStorys datas;
+    public USJsonFile deck;
 
     private Manager gameManager;
 
@@ -47,6 +47,12 @@ public class JSON_Manager : MonoBehaviour
         SendToManager();
     }*/
 
+    public void OpenFile()
+    {
+        deck = C_DeckFunctions.LoadDeck();
+        SendToManager();
+    }
+
     /// <summary>
     /// Permet de choisir le fichier JSON à inspecter.
     /// </summary>
@@ -57,7 +63,10 @@ public class JSON_Manager : MonoBehaviour
         if (path.Length == 0)
             return null;
         UserStorys uSList = JsonUtility.FromJson<UserStorys>(File.ReadAllText(path)); //File.ReadAllText() is necesseary beaucause i give a path rather than a file 
-        userStoryData[] deck = new userStoryData[uSList.US.Length];
+        
+
+
+        /*userStoryData[] deck = new userStoryData[uSList.US.Length];
 
         for (int i = 0; i < deck.Length; i++)
         {
@@ -67,20 +76,20 @@ public class JSON_Manager : MonoBehaviour
                 description = uSList.US[i].description
             };
         }
-        uSList.US = deck;
+        uSList.US = deck;*/
         return uSList;
     }
 
-    public UserStorys GetDeck()
+    public USJsonFile GetDeck()
     {
         Debug.Log("GetDeck");
-        if(datas != null)
+        if(deck != null)
         {
             //temp
             GameObject parent = transform.parent.gameObject;
             parent.SetActive(false);
             
-            return datas;
+            return deck;
         }
         return null;
     }
@@ -93,9 +102,9 @@ public class JSON_Manager : MonoBehaviour
         GameObject tmp = new GameObject("Manager");
         gameManager = tmp.AddComponent<Manager>();
         
-        gameManager.deck = datas; 
-        GameObject Parent = transform.parent.gameObject;
-        Destroy(Parent);
+        gameManager.deck = deck; 
+        //GameObject Parent = transform.parent.gameObject;
+        Destroy(transform.parent.gameObject);
     }
 
 }

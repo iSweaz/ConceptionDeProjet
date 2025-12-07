@@ -33,6 +33,7 @@ public static class C_JSonUtility
 
         string json = File.ReadAllText(path);
         USJsonFile deck = JsonConvert.DeserializeObject<USJsonFile>(json);
+        deck.filePath = path; // On set le filePath
         return deck;
     }
 }

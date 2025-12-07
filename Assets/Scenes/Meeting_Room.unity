@@ -482,7 +482,6 @@ GameObject:
   - component: {fileID: 243089922}
   - component: {fileID: 243089921}
   - component: {fileID: 243089924}
-  - component: {fileID: 243089925}
   - component: {fileID: 243089926}
   m_Layer: 0
   m_Name: Main Camera
@@ -609,22 +608,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &243089925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243089920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88fb15f5698f64745bd6097f9491a649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tmpFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  timeRemaining: 120
-  timerIsRunning: 0
-  timeText: {fileID: 0}
 --- !u!114 &243089926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,9 +685,9 @@ GameObject:
   - component: {fileID: 323953921}
   - component: {fileID: 323953920}
   - component: {fileID: 323953919}
-  - component: {fileID: 323953918}
+  - component: {fileID: 323953922}
   m_Layer: 5
-  m_Name: JSON
+  m_Name: B_ImportDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -730,20 +713,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &323953918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323953916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f527233ba41934f997a8cdeb6ebea4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  datas:
-    US: []
 --- !u!114 &323953919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +756,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 323953920}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 323953922}
+        m_TargetAssemblyTypeName: JSON_Manager, Assembly-CSharp
+        m_MethodName: OpenFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &323953920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,6 +807,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323953916}
   m_CullTransparentMesh: 1
+--- !u!114 &323953922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323953916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86de430cbf8faf04c8180980030bbcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deck:
+    title: Titre
+    usdata_list: []
 --- !u!1 &436691718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2432,7 @@ GameObject:
   - component: {fileID: 1844415044}
   - component: {fileID: 1844415043}
   - component: {fileID: 1844415046}
+  - component: {fileID: 1844415047}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2540,7 +2537,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
-    US: []
+    title: Titre
+    usdata_list: []
+--- !u!114 &1844415047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844415041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4249fe3f4c6d84ca15ddd85f81dcb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmpFont: {fileID: 0}
+  timeRemaining: 120
+  timerIsRunning: 0
+  timeText: {fileID: 0}
 --- !u!1 &1956427520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7808962501362573550, guid: 5de3d4f6ff23e9a49ad127111f7605b0, type: 3}
@@ -2585,7 +2599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2000772763
 MonoBehaviour:
   m_ObjectHideFlags: 0

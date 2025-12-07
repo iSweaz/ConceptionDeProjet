@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Bootstrap.unity
+    guid: ab37089c31657034bb7bc295df6e70dc
+  - enabled: 1
     path: Assets/Scenes/JSonTester.unity
     guid: 6c8818d2b07d3d1488d45461cd1c2888
+  - enabled: 1
+    path: Assets/Scenes/Meeting_Room.unity
+    guid: 9aa4940fb01770b45a55127068d2514f
+  - enabled: 1
+    path: Assets/Scenes/Create_Meeting.unity
+    guid: b9a86079eef2d2446b517993b12016ff
   - enabled: 0
     path: Assets/Scenes/Create_deck.unity
     guid: 889223b4f44f75c4da5e82c1844a8aec
