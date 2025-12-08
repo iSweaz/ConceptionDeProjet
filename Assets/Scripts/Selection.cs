@@ -7,16 +7,19 @@ public class Selection : MonoBehaviour
 
     private GameObject lastObject;
     private Renderer m_ObjectRenderer;
+    private Timer timer;
 
     void Start()
     {
         cam = GetComponent<Camera>();
+        timer = FindFirstObjectByType<Timer>(); // On récupère une référence vers timer
 
     }
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        // On check les cartes si le timer est actif
+        if (Input.GetMouseButtonDown(0) && timer.timerIsRunning)
         {
             RayCast();
         }
@@ -29,7 +32,7 @@ public class Selection : MonoBehaviour
         if (Physics.Raycast(ray, out hit,15) )
         { 
             Debug.Log(hit.transform.CompareTag("Card"));
-            if(hit.transform.CompareTag("Card"))
+            if (hit.transform.CompareTag("Card"))
             {
                 answer = hit.transform.name;
                 ChangeColor(hit.transform.gameObject);

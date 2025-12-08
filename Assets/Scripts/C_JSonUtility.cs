@@ -16,6 +16,7 @@ public static class C_JSonUtility
     {
         string json = JsonConvert.SerializeObject(deck, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(path, json);
+        deck.filePath = path;
     }
 
     /// <summary>

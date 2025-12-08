@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class Singleton : MonoBehaviour
@@ -14,21 +13,19 @@ public class Singleton : MonoBehaviour
     }
 
     public static Singleton instance        {get; private set;}
-    public Deck.UserStorys  deck            {get; set;}
+    public USJsonFile       deck            {get; set;}
     public int              numParticipants {get; set;}
     public float            time            {get; set;}
     public GameMode         mode            {get; set;}
-    public List<string>     Players         {get; set;}
-    
+    public List<string>     Players         {get; set;} 
 
     private void Awake()
     {
-        Players = new List<string>();
-
         if(instance !=null && instance!= this)
             Destroy(this);
         else
         {
+            Players = new List<string>();
             instance = this; 
             DontDestroyOnLoad(this);
         }
