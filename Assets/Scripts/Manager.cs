@@ -23,8 +23,8 @@ public class Manager : MonoBehaviour
         lengthDeck = deck.US.Length;
         
         blackBoard = FindFirstObjectByType<Display_Unit>();
-        blackBoard.deck = deck;
-        blackBoard.ChangeDisplay(compteurItem);
+        // blackBoard.deck = deck;
+        // blackBoard.ChangeDisplay(compteurItem);
 
         timer = FindFirstObjectByType<Timer>();
         timer.timeRemaining = timeRemaining;
@@ -45,7 +45,7 @@ public class Manager : MonoBehaviour
                 timer.timeRemaining = timeRemaining;
                 timer.timerIsRunning = true;
 
-                blackBoard.ChangeDisplay(compteurItem); // à retirer, présent pour check le fonctionnement du changement de US
+                // blackBoard.ChangeDisplay(compteurItem); // à retirer, présent pour check le fonctionnement du changement de US
                 Answer = "";
                 player.answer = "i";
                 player.ChangeColor(null);

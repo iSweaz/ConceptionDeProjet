@@ -1,54 +1,60 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using PurrNet;
 
-public class Timer : MonoBehaviour
+public class NI_Timer : NetworkIdentity
 {
     [Header("Font")]
-    public TMP_FontAsset tmpFont; // Assign your TMP font asset in Inspector
+    public TMP_FontAsset tmpFont = null; // Assign your TMP font asset in Inspector
     [Header("Parameters")]
-    public float timeRemaining = 120;
+    public SyncVar<float> timeRemaining = new(120);
     public bool timerIsRunning = true;
 
     public TMP_Text timeText;
 
     void Start()
     {
+        if(tmpFont == null)
+            tmpFont = Resources.Load<TMP_FontAsset>("Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset");
         createCanvas();
     }
 
+    [ServerOnly]
     void Update()
     {
-        if (timerIsRunning)
+         if (timerIsRunning)
         {
-            if (timeRemaining > 0)
+            if (timeRemaining.value > 0)
             {
-                timeRemaining -= Time.deltaTime;
+                timeRemaining.value -= Time.deltaTime;
                 DisplayTime(timeRemaining);
             }
             else
             {
-                timeRemaining = 0;
-                timerIsRunning = false;
+                timeRemaining.value = 0;
             }
         }
     }
-
     public void launchTimer()
     {
         timerIsRunning = true;
     }
 
-    void DisplayTime(float timeToDisplay)
-    {
+    [ObserversRpc]
+    public void DisplayTime(float timeToDisplay)
+    {    
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        if(!timeText)
+            return;
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
     
-    void createCanvas()
+    public void createCanvas()
     {
         GameObject canvasGO = new GameObject("RuntimeCanvas");
+        canvasGO.AddComponent<NetworkIdentity>();
 
         Canvas canvas = canvasGO.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using System.Threading.Tasks;
 using System;
 using UnityEditor;
+using Unity.VisualScripting;
+using PurrNet;
 
 
 [System.Serializable]
@@ -26,26 +28,26 @@ public class JSON_Manager : MonoBehaviour
     [SerializeField]
     private UserStorys datas;
 
-    private Manager gameManager;
+    private NI_Manager gameManager;
 
-    /*void Start()
+    void Start()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(OpenFile);
 
-    }*/
+    }
 
     /// <summary>
     /// Permet de choisir le fichier JSON à inspecter
     /// </summary>
-    /*private void OpenFile()
+    private void OpenFile()
     {
         string[] filters = { "JSON files", "json" };
         string path = EditorUtility.OpenFilePanelWithFilters("Choose a deck", "", filters);
         datas = SetDeck(path);
 
         SendToManager();
-    }*/
+    }
 
     /// <summary>
     /// Permet de choisir le fichier JSON à inspecter.
@@ -90,10 +92,10 @@ public class JSON_Manager : MonoBehaviour
     /// </summary>
     public void SendToManager()
     {
-        GameObject tmp = new GameObject("Manager");
-        gameManager = tmp.AddComponent<Manager>();
-        
-        gameManager.deck = datas; 
+        gameManager = FindFirstObjectByType<NI_Manager>();
+
+        //gameManager.lengthDeck = datas.US.Length;
+        // gameManager.deck = datas;
         GameObject Parent = transform.parent.gameObject;
         Destroy(Parent);
     }
