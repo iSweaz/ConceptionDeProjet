@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 120;
     public bool timerIsRunning = true;
 
-    TMP_Text timeText;
+    public TMP_Text timeText;
 
     void Start()
     {
@@ -28,10 +28,29 @@ public class Timer : MonoBehaviour
             }
             else
             {
-                timeRemaining = 0;
-                timerIsRunning = false;
+                stopTimer();
             }
         }
+    }
+
+    /// <summary>
+    /// Fonction qui lance le timer
+    /// </summary>
+    /// <param name="timeRemaining"></param>
+    public void startTimer(float timeRemaining)
+    {
+        timerIsRunning = true;
+        this.timeRemaining = timeRemaining;
+
+    }
+
+    /// <summary>
+    /// Fonction qui arrête le timer
+    /// </summary>
+    public void stopTimer()
+    {
+        timerIsRunning = false; // On passe à false le booléen qui permet d'entrer dans la boucle
+        timeText.text = ""; // On reset le texte
     }
 
     public void launchTimer()

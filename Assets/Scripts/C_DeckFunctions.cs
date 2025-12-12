@@ -25,6 +25,19 @@ public static class C_DeckFunctions
     }
 
     /// <summary>
+    /// Fonction de sauvegarde automatique du deck en .json. Le deck doit avoir été préalablement chargé
+    /// </summary>
+    /// <param name="deck"></param>
+    public static void AutoSaveDeck(USJsonFile deck)
+    {
+        string path = deck.filePath;
+        if (path != "")
+        {
+            C_JSonUtility.SaveDeck(deck, path);
+        }
+    }
+
+    /// <summary>
     /// Fonction qui sauvegarde le deck en .json, avec le titre du deck et la liste contenant les users stories
     /// </summary>
     /// <param name="deck">Type avec titre du deck + la liste qui contient les users stories</param>
