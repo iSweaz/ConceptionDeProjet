@@ -5,8 +5,10 @@ var searchData=
   ['permissioncallback_2',['PermissionCallback',['../classSimpleFileBrowser_1_1FileBrowser.html#a220f68b4837c2e57e0cb125f437d5fff',1,'SimpleFileBrowser::FileBrowser']]],
   ['pickfolderquicklinktext_3',['PickFolderQuickLinkText',['../classSimpleFileBrowser_1_1FileBrowser.html#ad3672aed357666432a70a1b78cf2ad92',1,'SimpleFileBrowser::FileBrowser']]],
   ['pickmode_4',['PickMode',['../classSimpleFileBrowser_1_1FileBrowser.html#a6cc8c63208eaf07a39c6ff70ec41dbf6',1,'SimpleFileBrowser::FileBrowser']]],
-  ['popuppanelsbackground_5',['PopupPanelsBackground',['../classSimpleFileBrowser_1_1UISkin.html#a58ac6514f93032778efd63001e862b72',1,'SimpleFileBrowser::UISkin']]],
-  ['popuppanelsbackgroundcolor_6',['PopupPanelsBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#ad4e1d23dd11eb6727c4b9f6dff8eedac',1,'SimpleFileBrowser::UISkin']]],
-  ['popuppanelstextcolor_7',['PopupPanelsTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a3dae2b3d2f7d39a036e771405347f430',1,'SimpleFileBrowser::UISkin']]],
-  ['position_8',['Position',['../classSimpleFileBrowser_1_1ListItem.html#acf66424b18240f38f133eab4ef5680bb',1,'SimpleFileBrowser::ListItem']]]
+  ['playeranswer_5',['playerAnswer',['../classNI__Selection.html#abfc6002e8ea6a32e5fed248f349e7755',1,'NI_Selection']]],
+  ['players_6',['players',['../classNI__Manager.html#ada6495a91fa99c20f6d580f134ba7873',1,'NI_Manager']]],
+  ['popuppanelsbackground_7',['PopupPanelsBackground',['../classSimpleFileBrowser_1_1UISkin.html#a58ac6514f93032778efd63001e862b72',1,'SimpleFileBrowser::UISkin']]],
+  ['popuppanelsbackgroundcolor_8',['PopupPanelsBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#ad4e1d23dd11eb6727c4b9f6dff8eedac',1,'SimpleFileBrowser::UISkin']]],
+  ['popuppanelstextcolor_9',['PopupPanelsTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a3dae2b3d2f7d39a036e771405347f430',1,'SimpleFileBrowser::UISkin']]],
+  ['position_10',['Position',['../classSimpleFileBrowser_1_1ListItem.html#acf66424b18240f38f133eab4ef5680bb',1,'SimpleFileBrowser::ListItem']]]
 ];

@@ -48,9 +48,7 @@ var hierarchy =
       [ "CanvasSampleOpenFileTextMultiple", "classCanvasSampleOpenFileTextMultiple.html", null ],
       [ "CanvasSampleSaveFileImage", "classCanvasSampleSaveFileImage.html", null ],
       [ "CanvasSampleSaveFileText", "classCanvasSampleSaveFileText.html", null ],
-      [ "Create_JSON", "classCreate__JSON.html", null ],
       [ "Display_Unit", "classDisplay__Unit.html", null ],
-      [ "JSON_Manager", "classJSON__Manager.html", null ],
       [ "JSON_Manager", "classJSON__Manager.html", null ],
       [ "MB_JSonTester", "classMB__JSonTester.html", null ],
       [ "Manager", "classManager.html", null ],
@@ -67,17 +65,22 @@ var hierarchy =
         [ "SimpleFileBrowser.FileBrowserItem", "classSimpleFileBrowser_1_1FileBrowserItem.html", null ]
       ] ],
       [ "SimpleFileBrowser.RecycledListView", "classSimpleFileBrowser_1_1RecycledListView.html", null ],
-      [ "Timer", "classTimer.html", null ],
-      [ "deck", "classdeck.html", null ]
+      [ "Timer", "classTimer.html", null ]
+    ] ],
+    [ "NetworkIdentity", null, [
+      [ "NI_Display_Unit", "classNI__Display__Unit.html", null ],
+      [ "NI_Manager", "classNI__Manager.html", null ],
+      [ "NI_Selection", "classNI__Selection.html", null ],
+      [ "NI_SpawnSettings", "classNI__SpawnSettings.html", null ],
+      [ "NI_Timer", "classNI__Timer.html", null ],
+      [ "test", "classtest.html", null ]
     ] ],
     [ "ScriptableObject", null, [
       [ "SimpleFileBrowser.UISkin", "classSimpleFileBrowser_1_1UISkin.html", null ]
     ] ],
     [ "SFB.StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ],
     [ "USData", "classUSData.html", null ],
-    [ "deck.userStoryData", "classdeck_1_1userStoryData.html", null ],
     [ "userStoryData", "classuserStoryData.html", null ],
-    [ "deck.UserStorys", "classdeck_1_1UserStorys.html", null ],
     [ "UserStorys", "classUserStorys.html", null ],
     [ "USJsonFile", "classUSJsonFile.html", null ]
 ];

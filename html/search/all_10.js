@@ -11,7 +11,7 @@ var searchData=
   ['selection_2ecs_8',['Selection.cs',['../Selection_8cs.html',1,'']]],
   ['sendtomanager_9',['SendToManager',['../classJSON__Manager.html#aba8ee50fba9f27696de853ad6d48603c',1,'JSON_Manager']]],
   ['setadapter_10',['SetAdapter',['../classSimpleFileBrowser_1_1RecycledListView.html#a59a8edc9c141fb6194c70c8015645ea5',1,'SimpleFileBrowser::RecycledListView']]],
-  ['setdeck_11',['setdeck',['../classJSON__Manager.html#aa76e03325b684fb856123624c141d08e',1,'JSON_Manager.SetDeck(string path)'],['../classJSON__Manager.html#ad70c0acfcfa97ea944648dd9258ae7ab',1,'JSON_Manager.SetDeck(string path)']]],
+  ['setdeck_11',['SetDeck',['../classJSON__Manager.html#aa76e03325b684fb856123624c141d08e',1,'JSON_Manager']]],
   ['setdefaultfilter_12',['SetDefaultFilter',['../classSimpleFileBrowser_1_1FileBrowser.html#a18f0a026058b9471665ce94ccee39fe4',1,'SimpleFileBrowser::FileBrowser']]],
   ['setexcludedextensions_13',['SetExcludedExtensions',['../classSimpleFileBrowser_1_1FileBrowser.html#a1b5212c0395f95e3f6975d0448cc2caf',1,'SimpleFileBrowser::FileBrowser']]],
   ['setfile_14',['SetFile',['../classSimpleFileBrowser_1_1FileBrowserItem.html#a7a5b538b38aa7df3c23a35a3ddcee0b9',1,'SimpleFileBrowser::FileBrowserItem']]],
