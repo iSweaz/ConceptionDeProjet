@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['icon_0',['icon',['../classSimpleFileBrowser_1_1FileBrowserItem.html#a06468aa5b579ab38e921b19dc398bc32',1,'SimpleFileBrowser.FileBrowserItem.Icon'],['../structSimpleFileBrowser_1_1FiletypeIcon.html#a6a21a43685212880e29dd8f05186b5b9',1,'SimpleFileBrowser.FiletypeIcon.icon']]],
+  ['icon_0',['icon',['../structSimpleFileBrowser_1_1FiletypeIcon.html#a6a21a43685212880e29dd8f05186b5b9',1,'SimpleFileBrowser.FiletypeIcon.icon'],['../classSimpleFileBrowser_1_1FileBrowserItem.html#a06468aa5b579ab38e921b19dc398bc32',1,'SimpleFileBrowser.FileBrowserItem.Icon']]],
   ['ilistviewadapter_1',['IListViewAdapter',['../interfaceSimpleFileBrowser_1_1IListViewAdapter.html',1,'SimpleFileBrowser']]],
   ['ilistviewadapter_2ecs_2',['IListViewAdapter.cs',['../IListViewAdapter_8cs.html',1,'']]],
-  ['initdisplay_3',['InitDisplay',['../classNI__Display__Unit.html#a7015cbeb9cc4583b4c1d49fe664df4e7',1,'NI_Display_Unit']]],
+  ['importdeck_3',['ImportDeck',['../classCreate__Session.html#a352c01363e830fd8b7e033b94c94970a',1,'Create_Session']]],
   ['initialize_4',['Initialize',['../classSimpleFileBrowser_1_1FileBrowserMovement.html#adea93e93c72b8f9bec6ad9bc0b4e9410',1,'SimpleFileBrowser::FileBrowserMovement']]],
   ['inputfield_5',['InputField',['../classSimpleFileBrowser_1_1FileBrowserRenamedItem.html#aabdff77ed4c6402479fbccdf234316e3',1,'SimpleFileBrowser::FileBrowserRenamedItem']]],
   ['inputfieldbackground_6',['InputFieldBackground',['../classSimpleFileBrowser_1_1UISkin.html#a2f37fb76b1314c71982df6652f00c0a8',1,'SimpleFileBrowser::UISkin']]],
@@ -13,7 +13,7 @@ var searchData=
   ['inputfieldplaceholdertextcolor_10',['InputFieldPlaceholderTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a0b1f9a7ba3cb01fd26861636d2f409da',1,'SimpleFileBrowser::UISkin']]],
   ['inputfieldselectedtextcolor_11',['InputFieldSelectedTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a1e9ee0ced993f2682de32582341f1358',1,'SimpleFileBrowser::UISkin']]],
   ['inputfieldtextcolor_12',['InputFieldTextColor',['../classSimpleFileBrowser_1_1UISkin.html#acfe4ec66676458c1b60b8799f617bea3',1,'SimpleFileBrowser::UISkin']]],
-  ['instance_13',['Instance',['../classSimpleFileBrowser_1_1FileBrowser.html#a66dcbf7dcb0c19c11e9175553ef2e518',1,'SimpleFileBrowser::FileBrowser']]],
+  ['instance_13',['instance',['../classSingleton.html#a92bce9e76ed88bcc8f63daa8f11fc426',1,'Singleton.instance'],['../classSimpleFileBrowser_1_1FileBrowser.html#a66dcbf7dcb0c19c11e9175553ef2e518',1,'SimpleFileBrowser.FileBrowser.Instance']]],
   ['isdirectory_14',['isdirectory',['../structSimpleFileBrowser_1_1FileSystemEntry.html#a3e0c40ca262804dbeb42ec3d5f33f162',1,'SimpleFileBrowser.FileSystemEntry.IsDirectory'],['../classSimpleFileBrowser_1_1FileBrowserItem.html#aedc8f92630d7e141f3f11fc58b63fa73',1,'SimpleFileBrowser.FileBrowserItem.IsDirectory']]],
   ['isopen_15',['IsOpen',['../classSimpleFileBrowser_1_1FileBrowser.html#aae6890aa2e637c1882c631dcae9ec420',1,'SimpleFileBrowser::FileBrowser']]],
   ['istandalonefilebrowser_16',['IStandaloneFileBrowser',['../interfaceSFB_1_1IStandaloneFileBrowser.html',1,'SFB']]],
