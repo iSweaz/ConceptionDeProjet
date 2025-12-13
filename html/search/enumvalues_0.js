@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['delete_0',['Delete',['../classSimpleFileBrowser_1_1FileBrowserFileOperationConfirmationPanel.html#a7390530ba9589a4616cda0f110fefc1eaf2a6c498fb90ee345d997f888fce3b18',1,'SimpleFileBrowser::FileBrowserFileOperationConfirmationPanel']]],
-  ['denied_1',['Denied',['../classSimpleFileBrowser_1_1FileBrowser.html#aea724ab7d80912fa5e0274cff1b3778ba58d036b9b7f0e7eb38cfb90f1cc70a73',1,'SimpleFileBrowser::FileBrowser']]]
+  ['absmajority_0',['AbsMajority',['../classSingleton.html#a672bd24335be16fc167c7906e5cfb01ba0c74a9a700fd117c7a77c612ed54edf6',1,'Singleton']]],
+  ['average_1',['Average',['../classSingleton.html#a672bd24335be16fc167c7906e5cfb01bab1897515d548a960afe49ecf66a29021',1,'Singleton']]]
 ];

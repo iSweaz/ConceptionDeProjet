@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['files_0',['Files',['../classSimpleFileBrowser_1_1FileBrowser.html#a6cc8c63208eaf07a39c6ff70ec41dbf6a91f3a2c0e4424c87689525da44c4db11',1,'SimpleFileBrowser::FileBrowser']]],
-  ['filesandfolders_1',['FilesAndFolders',['../classSimpleFileBrowser_1_1FileBrowser.html#a6cc8c63208eaf07a39c6ff70ec41dbf6a09a1caedcd4fd423710c19c497e9194d',1,'SimpleFileBrowser::FileBrowser']]],
-  ['folders_2',['Folders',['../classSimpleFileBrowser_1_1FileBrowser.html#a6cc8c63208eaf07a39c6ff70ec41dbf6a60c7502b5c40479908aed919a94c1786',1,'SimpleFileBrowser::FileBrowser']]]
+  ['delete_0',['Delete',['../classSimpleFileBrowser_1_1FileBrowserFileOperationConfirmationPanel.html#a7390530ba9589a4616cda0f110fefc1eaf2a6c498fb90ee345d997f888fce3b18',1,'SimpleFileBrowser::FileBrowserFileOperationConfirmationPanel']]],
+  ['denied_1',['Denied',['../classSimpleFileBrowser_1_1FileBrowser.html#aea724ab7d80912fa5e0274cff1b3778ba58d036b9b7f0e7eb38cfb90f1cc70a73',1,'SimpleFileBrowser::FileBrowser']]]
 ];

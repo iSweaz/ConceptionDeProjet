@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['recycledlistview_0',['RecycledListView',['../classSimpleFileBrowser_1_1RecycledListView.html',1,'SimpleFileBrowser']]]
+  ['selection_0',['Selection',['../classSelection.html',1,'']]],
+  ['singleton_1',['Singleton',['../classSingleton.html',1,'']]],
+  ['standalonefilebrowser_2',['StandaloneFileBrowser',['../classSFB_1_1StandaloneFileBrowser.html',1,'SFB']]]
 ];

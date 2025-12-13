@@ -8,5 +8,6 @@ var searchData=
   ['canvassampleopenfiletext_2ecs_5',['CanvasSampleOpenFileText.cs',['../CanvasSampleOpenFileText_8cs.html',1,'']]],
   ['canvassampleopenfiletextmultiple_2ecs_6',['CanvasSampleOpenFileTextMultiple.cs',['../CanvasSampleOpenFileTextMultiple_8cs.html',1,'']]],
   ['canvassamplesavefileimage_2ecs_7',['CanvasSampleSaveFileImage.cs',['../CanvasSampleSaveFileImage_8cs.html',1,'']]],
-  ['canvassamplesavefiletext_2ecs_8',['CanvasSampleSaveFileText.cs',['../CanvasSampleSaveFileText_8cs.html',1,'']]]
+  ['canvassamplesavefiletext_2ecs_8',['CanvasSampleSaveFileText.cs',['../CanvasSampleSaveFileText_8cs.html',1,'']]],
+  ['create_5fsession_2ecs_9',['Create_Session.cs',['../Create__Session_8cs.html',1,'']]]
 ];
