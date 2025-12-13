@@ -33,8 +33,8 @@ public class Manager : MonoBehaviour
         lengthDeck = deck.usdata_list.Count();
         
         blackBoard = FindFirstObjectByType<Display_Unit>();
-        blackBoard.deck = deck;
-        blackBoard.ChangeDisplay(compteurItem);
+        // blackBoard.deck = deck;
+        // blackBoard.ChangeDisplay(compteurItem);
 
         timer = FindFirstObjectByType<Timer>();
         //timer.startTimer(timeRemaining);
@@ -58,6 +58,7 @@ public class Manager : MonoBehaviour
         timer.startTimer(timeRemaining);
         processedCurrent = true;
     }
+
 
     /// <summary>
     /// Fonction qui réagit au clic sur le bouton Next
@@ -112,14 +113,4 @@ public class Manager : MonoBehaviour
         // On AutoSave le fichier JSON
         C_DeckFunctions.AutoSaveDeck(deck);
     }
-
-    // void loadCard()
-    // {
-    //     GameObject Parent =  GameObject.Find("Cards");
-    //     GameObject[] Cards =  new GameObject[11];
-    //     for (int i = 0; i < Cards.Length; i++)
-    //     {
-    //         Cards[i] = Parent.transform.GetChild(i).gameObject;
-    //     }
-    // }
 }
