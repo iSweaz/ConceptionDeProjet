@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['headertext_0',['headerText',['../classMB__CreateDeckManager.html#ab7c55d119d043aeee13f983342b51426',1,'MB_CreateDeckManager']]]
+  ['icon_0',['icon',['../structSimpleFileBrowser_1_1FiletypeIcon.html#a6a21a43685212880e29dd8f05186b5b9',1,'SimpleFileBrowser::FiletypeIcon']]]
 ];

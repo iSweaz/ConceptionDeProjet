@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]],
-  ['recycledlistview_1',['RecycledListView',['../classSimpleFileBrowser_1_1RecycledListView.html',1,'SimpleFileBrowser']]],
-  ['recycledlistview_2ecs_2',['RecycledListView.cs',['../RecycledListView_8cs.html',1,'']]],
-  ['refreshfiles_3',['RefreshFiles',['../classSimpleFileBrowser_1_1FileBrowser.html#a73701411ebdb721ebd99a8575e9b1b56',1,'SimpleFileBrowser::FileBrowser']]],
-  ['relmajority_4',['RelMajority',['../classSingleton.html#a672bd24335be16fc167c7906e5cfb01baf4485115a740bd00d9972f099c5a09a7',1,'Singleton']]],
-  ['renameselectedfile_5',['RenameSelectedFile',['../classSimpleFileBrowser_1_1FileBrowser.html#a46914c7fbb4eb15a0abb48fc837c66ae',1,'SimpleFileBrowser::FileBrowser']]],
-  ['requestpermissionasync_6',['RequestPermissionAsync',['../classSimpleFileBrowser_1_1FileBrowser.html#a694c44b7ab5b30154f220b713b0de6c5',1,'SimpleFileBrowser::FileBrowser']]],
-  ['result_7',['Result',['../classSimpleFileBrowser_1_1FileBrowser.html#a070ff8bdc65e2452285120ae0b25264d',1,'SimpleFileBrowser::FileBrowser']]],
-  ['rowheight_8',['RowHeight',['../classSimpleFileBrowser_1_1UISkin.html#ad0ddbfbb3d4c3d51178d0413275e573c',1,'SimpleFileBrowser::UISkin']]],
-  ['rowspacing_9',['RowSpacing',['../classSimpleFileBrowser_1_1UISkin.html#aef8a44892ac730bbed57fa1eaba5869b',1,'SimpleFileBrowser::UISkin']]]
+  ['path_0',['Path',['../structSimpleFileBrowser_1_1FileSystemEntry.html#ad4f60ed2f532d86610e8f5501e83c3b7',1,'SimpleFileBrowser::FileSystemEntry']]],
+  ['permission_1',['Permission',['../classSimpleFileBrowser_1_1FileBrowser.html#aea724ab7d80912fa5e0274cff1b3778b',1,'SimpleFileBrowser::FileBrowser']]],
+  ['permissioncallback_2',['PermissionCallback',['../classSimpleFileBrowser_1_1FileBrowser.html#a220f68b4837c2e57e0cb125f437d5fff',1,'SimpleFileBrowser::FileBrowser']]],
+  ['pickfolderquicklinktext_3',['PickFolderQuickLinkText',['../classSimpleFileBrowser_1_1FileBrowser.html#ad3672aed357666432a70a1b78cf2ad92',1,'SimpleFileBrowser::FileBrowser']]],
+  ['pickmode_4',['PickMode',['../classSimpleFileBrowser_1_1FileBrowser.html#a6cc8c63208eaf07a39c6ff70ec41dbf6',1,'SimpleFileBrowser::FileBrowser']]],
+  ['playeranswer_5',['playerAnswer',['../classNI__Selection.html#abfc6002e8ea6a32e5fed248f349e7755',1,'NI_Selection']]],
+  ['players_6',['players',['../classNI__GameManager.html#acaa1e7e4c0fc92324d90fc98f7122141',1,'NI_GameManager']]],
+  ['popuppanelsbackground_7',['PopupPanelsBackground',['../classSimpleFileBrowser_1_1UISkin.html#a58ac6514f93032778efd63001e862b72',1,'SimpleFileBrowser::UISkin']]],
+  ['popuppanelsbackgroundcolor_8',['PopupPanelsBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#ad4e1d23dd11eb6727c4b9f6dff8eedac',1,'SimpleFileBrowser::UISkin']]],
+  ['popuppanelstextcolor_9',['PopupPanelsTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a3dae2b3d2f7d39a036e771405347f430',1,'SimpleFileBrowser::UISkin']]],
+  ['position_10',['Position',['../classSimpleFileBrowser_1_1ListItem.html#acf66424b18240f38f133eab4ef5680bb',1,'SimpleFileBrowser::ListItem']]]
 ];

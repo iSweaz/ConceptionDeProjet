@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../classSimpleFileBrowser_1_1FileBrowser_1_1Filter.html#a0de16912768c9796befb9aa89bbb95d8',1,'SimpleFileBrowser.FileBrowser.Filter.name'],['../classDeck_1_1userStoryData.html#a510a545ca032e7cdbc50c2e319333cd8',1,'Deck.userStoryData.name'],['../classdeck_1_1userStoryData.html#ab9eb3a0c55a6c9018e05a4fd4923070e',1,'deck.userStoryData.name'],['../structSimpleFileBrowser_1_1FileSystemEntry.html#a0222d3b378fd35032a6f7f9151620ac8',1,'SimpleFileBrowser.FileSystemEntry.Name'],['../structSFB_1_1ExtensionFilter.html#a21623dc9da43ebb0ff88893bb9a57e00',1,'SFB.ExtensionFilter.Name']]],
-  ['nametext_1',['nameText',['../classDisplay__Unit.html#a2b67d0d9bf649010bf733d7d9b6adc24',1,'Display_Unit']]],
-  ['nextbutton_2',['nextButton',['../classManager.html#aabdc91701c5e780d862bd7aec08dab52',1,'Manager']]]
+  ['path_0',['Path',['../structSimpleFileBrowser_1_1FileSystemEntry.html#ad4f60ed2f532d86610e8f5501e83c3b7',1,'SimpleFileBrowser::FileSystemEntry']]],
+  ['playeranswer_1',['playerAnswer',['../classNI__Selection.html#abfc6002e8ea6a32e5fed248f349e7755',1,'NI_Selection']]],
+  ['players_2',['players',['../classNI__GameManager.html#acaa1e7e4c0fc92324d90fc98f7122141',1,'NI_GameManager']]]
 ];

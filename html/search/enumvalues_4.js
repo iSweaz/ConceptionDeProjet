@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['median_0',['Median',['../classSingleton.html#a672bd24335be16fc167c7906e5cfb01ba66851a3adec6655a7bd563743e4a55a2',1,'Singleton']]]
+  ['shouldask_0',['ShouldAsk',['../classSimpleFileBrowser_1_1FileBrowser.html#aea724ab7d80912fa5e0274cff1b3778ba482e39c774df31679c1ed2a0b1ab2fa7',1,'SimpleFileBrowser::FileBrowser']]]
 ];

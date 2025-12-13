@@ -48,12 +48,8 @@ var hierarchy =
       [ "CanvasSampleOpenFileTextMultiple", "classCanvasSampleOpenFileTextMultiple.html", null ],
       [ "CanvasSampleSaveFileImage", "classCanvasSampleSaveFileImage.html", null ],
       [ "CanvasSampleSaveFileText", "classCanvasSampleSaveFileText.html", null ],
-      [ "Create_JSON", "classCreate__JSON.html", null ],
-      [ "Create_Session", "classCreate__Session.html", null ],
-      [ "Deck", "classDeck.html", null ],
       [ "Display_Unit", "classDisplay__Unit.html", null ],
-      [ "MB_CreateDeckManager", "classMB__CreateDeckManager.html", null ],
-      [ "MB_DeckUSButton", "classMB__DeckUSButton.html", null ],
+      [ "JSON_Manager", "classJSON__Manager.html", null ],
       [ "MB_JSonTester", "classMB__JSonTester.html", null ],
       [ "Manager", "classManager.html", null ],
       [ "Selection", "classSelection.html", null ],
@@ -69,19 +65,22 @@ var hierarchy =
         [ "SimpleFileBrowser.FileBrowserItem", "classSimpleFileBrowser_1_1FileBrowserItem.html", null ]
       ] ],
       [ "SimpleFileBrowser.RecycledListView", "classSimpleFileBrowser_1_1RecycledListView.html", null ],
-      [ "Singleton", "classSingleton.html", null ],
-      [ "TMPButtonInteractableColor", "classTMPButtonInteractableColor.html", null ],
-      [ "Timer", "classTimer.html", null ],
-      [ "deck", "classdeck.html", null ]
+      [ "Timer", "classTimer.html", null ]
+    ] ],
+    [ "NetworkIdentity", null, [
+      [ "NI_Display_Unit", "classNI__Display__Unit.html", null ],
+      [ "NI_GameManager", "classNI__GameManager.html", null ],
+      [ "NI_Selection", "classNI__Selection.html", null ],
+      [ "NI_SpawnSettings", "classNI__SpawnSettings.html", null ],
+      [ "NI_Timer", "classNI__Timer.html", null ],
+      [ "test", "classtest.html", null ]
     ] ],
     [ "ScriptableObject", null, [
       [ "SimpleFileBrowser.UISkin", "classSimpleFileBrowser_1_1UISkin.html", null ]
     ] ],
     [ "SFB.StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ],
     [ "USData", "classUSData.html", null ],
-    [ "deck.userStoryData", "classdeck_1_1userStoryData.html", null ],
-    [ "Deck.userStoryData", "classDeck_1_1userStoryData.html", null ],
-    [ "deck.UserStorys", "classdeck_1_1UserStorys.html", null ],
-    [ "Deck.UserStorys", "classDeck_1_1UserStorys.html", null ],
+    [ "userStoryData", "classuserStoryData.html", null ],
+    [ "UserStorys", "classUserStorys.html", null ],
     [ "USJsonFile", "classUSJsonFile.html", null ]
 ];
