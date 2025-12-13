@@ -7,7 +7,7 @@ public class test : NetworkIdentity
     [SerializeField] private NetworkIdentity playerPefab, managerPrefab;
     [SerializeField] private Vector3 pos;
 
-    [SerializeField] private NI_Manager manager;
+    [SerializeField] private NI_GameManager manager;
     [SerializeField] private NI_Timer timer;
     [SerializeField] private NI_Selection playerSelection;
   
@@ -27,7 +27,7 @@ public class test : NetworkIdentity
 
             managerPrefab.Spawn(managerPrefab.gameObject);
 
-            manager = managerPrefab.GetComponent<NI_Manager>();
+            manager = managerPrefab.GetComponent<NI_GameManager>();
             timer = managerPrefab.GetComponent<NI_Timer>();
 
             playerSelection.name = "Server";
@@ -36,7 +36,7 @@ public class test : NetworkIdentity
         }
         else
         {
-            manager = FindFirstObjectByType<NI_Manager>();
+            manager = FindFirstObjectByType<NI_GameManager>();
             timer = FindFirstObjectByType<NI_Timer>();
         }
 

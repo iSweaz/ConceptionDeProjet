@@ -3,7 +3,7 @@ using PurrNet;
 using UnityEngine;
 
 
-public class NI_Manager : NetworkIdentity
+public class NI_GameManager : NetworkIdentity
 {
     public NI_Display_Unit blackBoard;
     [SerializeField] private NI_Timer timer; 
@@ -93,20 +93,21 @@ public class NI_Manager : NetworkIdentity
         }
     }
 
+    [Server]
     void resetPlayerValue()
     {
-        for(int i = 0; i < players.Count; i++)
+        foreach(var player in players)
         {
-            players[i].playerAnswer = "i";
-            players[i].ChangeColor(null,null);
+            player.resetValue();
         }
     }
 
     void GetAnswers()
     {
-        for(int i = 0; i < players.Count; i++)
+        Answers.Clear();
+        foreach(var player in players)
         {
-            Answers[i] = players[i].playerAnswer;
+            Answers.Add(player.playerAnswer);
         }
     }
 }

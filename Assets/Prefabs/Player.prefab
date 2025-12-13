@@ -145,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118692970392126890}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7d1fbb2148ee246bd022ccc92b042d, type: 3}
   m_Name: 
@@ -302,6 +302,9 @@ MonoBehaviour:
   _directChildren: []
   _networkRules: {fileID: 0}
   _visitiblityRules: {fileID: 0}
+  cam: {fileID: 0}
+  audioListener: {fileID: 0}
+  selection: {fileID: 0}
 --- !u!1001 &2887512772114154692
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -24,7 +24,6 @@ public class NI_Display_Unit : NetworkIdentity
     [ObserversRpc]
     public void ChangeDisplay(string title, string description)
     {
-      Debug.Log("ChangeDisplay"); 
       nameText.text = title;
       descText.text = description;
     }

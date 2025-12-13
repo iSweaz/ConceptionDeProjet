@@ -28,7 +28,7 @@ public class JSON_Manager : MonoBehaviour
     [SerializeField]
     private UserStorys datas;
 
-    private NI_Manager gameManager;
+    private NI_GameManager gameManager;
 
     void Start()
     {
@@ -92,7 +92,7 @@ public class JSON_Manager : MonoBehaviour
     /// </summary>
     public void SendToManager()
     {
-        gameManager = FindFirstObjectByType<NI_Manager>();
+        gameManager = FindFirstObjectByType<NI_GameManager>();
 
         //gameManager.lengthDeck = datas.US.Length;
         // gameManager.deck = datas;
