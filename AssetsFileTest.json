@@ -1,0 +1,17 @@
+{
+  "title": "FileTest",
+  "usdata_list": [
+    {
+      "titre": "Titre",
+      "desc": "Desc",
+      "score": -1,
+      "compteur": 0
+    },
+    {
+      "titre": "Titre2",
+      "desc": "Desc2",
+      "score": -1,
+      "compteur": 0
+    }
+  ]
+}
