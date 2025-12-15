@@ -32,7 +32,7 @@ public class test : NetworkIdentity
 
             playerSelection.name = "Server";
             manager.players.Add(playerSelection);
-            manager.Answers.Add(playerSelection.playerAnswer);
+            manager.answers.Add(playerSelection.answer);
         }
         else
         {
@@ -44,7 +44,7 @@ public class test : NetworkIdentity
 
         if(isClient)
         {
-            RegisterClient(playerSelection,playerSelection.playerAnswer);
+            RegisterClient(playerSelection,playerSelection.answer);
             playerSelection.name = "Client";
         }
     }
@@ -61,7 +61,7 @@ public class test : NetworkIdentity
         if(!manager)
             return;
         manager.players.Add(Player);
-        manager.Answers.Add(playerAnswer);
+        manager.answers.Add(playerAnswer);
         Debug.Log($"Serveur : joueur {Player.name} ajouté avec réponse {playerAnswer}");
     }
 
