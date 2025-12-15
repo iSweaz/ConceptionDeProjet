@@ -40,8 +40,8 @@ var searchData=
   ['standalonefilebrowserlinux_2ecs_37',['StandaloneFileBrowserLinux.cs',['../StandaloneFileBrowserLinux_8cs.html',1,'']]],
   ['standalonefilebrowsermac_2ecs_38',['StandaloneFileBrowserMac.cs',['../StandaloneFileBrowserMac_8cs.html',1,'']]],
   ['standalonefilebrowserwindows_2ecs_39',['StandaloneFileBrowserWindows.cs',['../StandaloneFileBrowserWindows_8cs.html',1,'']]],
-  ['startbutton_40',['startButton',['../classManager.html#a609ad343cf742687ac4b911f6fe24cca',1,'Manager']]],
-  ['starttimer_41',['startTimer',['../classTimer.html#aaa1d1a669064b6b60a93b3e5ec509d95',1,'Timer']]],
-  ['stoptimer_42',['stopTimer',['../classTimer.html#a1559b4209c1eba350626fc808d736b52',1,'Timer']]],
+  ['startbutton_40',['startbutton',['../classManager.html#a609ad343cf742687ac4b911f6fe24cca',1,'Manager.startButton'],['../classNI__GameManager.html#a401830c3199e54a21b1e2ec5f1a843ff',1,'NI_GameManager.startButton']]],
+  ['starttimer_41',['starttimer',['../classNI__Timer.html#a70eb08692b0281edd1a33cd3eaaac82c',1,'NI_Timer.startTimer()'],['../classTimer.html#aaa1d1a669064b6b60a93b3e5ec509d95',1,'Timer.startTimer()']]],
+  ['stoptimer_42',['stoptimer',['../classNI__Timer.html#aa8469ebad34f6bc0a01f6d288061b13c',1,'NI_Timer.stopTimer()'],['../classTimer.html#a1559b4209c1eba350626fc808d736b52',1,'Timer.stopTimer()']]],
   ['success_43',['Success',['../classSimpleFileBrowser_1_1FileBrowser.html#a644e2fc47f434acc4bf57c3edb405193',1,'SimpleFileBrowser::FileBrowser']]]
 ];

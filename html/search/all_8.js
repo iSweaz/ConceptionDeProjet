@@ -14,7 +14,7 @@ var searchData=
   ['inputfieldplaceholdertextcolor_11',['InputFieldPlaceholderTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a0b1f9a7ba3cb01fd26861636d2f409da',1,'SimpleFileBrowser::UISkin']]],
   ['inputfieldselectedtextcolor_12',['InputFieldSelectedTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a1e9ee0ced993f2682de32582341f1358',1,'SimpleFileBrowser::UISkin']]],
   ['inputfieldtextcolor_13',['InputFieldTextColor',['../classSimpleFileBrowser_1_1UISkin.html#acfe4ec66676458c1b60b8799f617bea3',1,'SimpleFileBrowser::UISkin']]],
-  ['instance_14',['instance',['../classSimpleFileBrowser_1_1FileBrowser.html#a66dcbf7dcb0c19c11e9175553ef2e518',1,'SimpleFileBrowser.FileBrowser.Instance'],['../classSingleton.html#a92bce9e76ed88bcc8f63daa8f11fc426',1,'Singleton.instance']]],
+  ['instance_14',['instance',['../classSingleton.html#a92bce9e76ed88bcc8f63daa8f11fc426',1,'Singleton.instance'],['../classSimpleFileBrowser_1_1FileBrowser.html#a66dcbf7dcb0c19c11e9175553ef2e518',1,'SimpleFileBrowser.FileBrowser.Instance']]],
   ['isdirectory_15',['isdirectory',['../structSimpleFileBrowser_1_1FileSystemEntry.html#a3e0c40ca262804dbeb42ec3d5f33f162',1,'SimpleFileBrowser.FileSystemEntry.IsDirectory'],['../classSimpleFileBrowser_1_1FileBrowserItem.html#aedc8f92630d7e141f3f11fc58b63fa73',1,'SimpleFileBrowser.FileBrowserItem.IsDirectory']]],
   ['isopen_16',['IsOpen',['../classSimpleFileBrowser_1_1FileBrowser.html#aae6890aa2e637c1882c631dcae9ec420',1,'SimpleFileBrowser::FileBrowser']]],
   ['istandalonefilebrowser_17',['IStandaloneFileBrowser',['../interfaceSFB_1_1IStandaloneFileBrowser.html',1,'SFB']]],

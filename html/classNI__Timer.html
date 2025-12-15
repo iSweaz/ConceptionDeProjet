@@ -105,6 +105,11 @@ Inheritance diagram for NI_Timer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a70eb08692b0281edd1a33cd3eaaac82c" id="r_a70eb08692b0281edd1a33cd3eaaac82c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a70eb08692b0281edd1a33cd3eaaac82c">startTimer</a> (float <a class="el" href="classNI__Timer.html#a87b9c0e60c136352ac7dc67ac0625058">timeRemaining</a>)</td></tr>
+<tr class="memdesc:a70eb08692b0281edd1a33cd3eaaac82c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui lance le timer.  <br /></td></tr>
+<tr class="separator:a70eb08692b0281edd1a33cd3eaaac82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8469ebad34f6bc0a01f6d288061b13c" id="r_aa8469ebad34f6bc0a01f6d288061b13c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#aa8469ebad34f6bc0a01f6d288061b13c">stopTimer</a> ()</td></tr>
+<tr class="separator:aa8469ebad34f6bc0a01f6d288061b13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa42a6a778d02f419725f7b852c73211e" id="r_aa42a6a778d02f419725f7b852c73211e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#aa42a6a778d02f419725f7b852c73211e">launchTimer</a> ()</td></tr>
 <tr class="separator:aa42a6a778d02f419725f7b852c73211e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fff832250981a4264b619e346551f01" id="r_a6fff832250981a4264b619e346551f01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a6fff832250981a4264b619e346551f01">DisplayTime</a> (float timeToDisplay)</td></tr>
@@ -118,7 +123,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acc7d7a5277303b707e5b4e937e2d1113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b9c0e60c136352ac7dc67ac0625058" id="r_a87b9c0e60c136352ac7dc67ac0625058"><td class="memItemLeft" align="right" valign="top">SyncVar&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a87b9c0e60c136352ac7dc67ac0625058">timeRemaining</a> = new(120)</td></tr>
 <tr class="separator:a87b9c0e60c136352ac7dc67ac0625058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf9577d95ba599dd820571e1891512ef" id="r_abf9577d95ba599dd820571e1891512ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#abf9577d95ba599dd820571e1891512ef">timerIsRunning</a> = true</td></tr>
+<tr class="memitem:abf9577d95ba599dd820571e1891512ef" id="r_abf9577d95ba599dd820571e1891512ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#abf9577d95ba599dd820571e1891512ef">timerIsRunning</a> = false</td></tr>
 <tr class="separator:abf9577d95ba599dd820571e1891512ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89f8cbbba7132fe85094a1e77259ab56" id="r_a89f8cbbba7132fe85094a1e77259ab56"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a89f8cbbba7132fe85094a1e77259ab56">timeText</a></td></tr>
 <tr class="separator:a89f8cbbba7132fe85094a1e77259ab56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,6 +205,65 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a70eb08692b0281edd1a33cd3eaaac82c" name="a70eb08692b0281edd1a33cd3eaaac82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70eb08692b0281edd1a33cd3eaaac82c">&#9670;&#160;</a></span>startTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NI_Timer.startTimer </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeRemaining</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction qui lance le timer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeRemaining</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa8469ebad34f6bc0a01f6d288061b13c" name="aa8469ebad34f6bc0a01f6d288061b13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8469ebad34f6bc0a01f6d288061b13c">&#9670;&#160;</a></span>stopTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NI_Timer.stopTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a87b9c0e60c136352ac7dc67ac0625058" name="a87b9c0e60c136352ac7dc67ac0625058"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87b9c0e60c136352ac7dc67ac0625058">&#9670;&#160;</a></span>timeRemaining</h2>
@@ -222,7 +286,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool NI_Timer.timerIsRunning = true</td>
+          <td class="memname">bool NI_Timer.timerIsRunning = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
