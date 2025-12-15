@@ -45,7 +45,10 @@ public class NI_GameManager : NetworkIdentity
             {
                 deck = instance.deck;
                 if(!instance.revalutate && CheckScore())
+                {
+                    Debug.Log("+1 à l'init");
                     compteurItem++;
+                }
 
                 timeRemaining = instance.time;
                 if(udp) udp.maxConnections = instance.numParticipants;
@@ -132,7 +135,7 @@ public class NI_GameManager : NetworkIdentity
 
 
         compteurItem++; // on incrémente l'index
-        if(CheckScore())
+        if(!instance.revalutate && CheckScore())
             compteurItem++; // Permet de skip si déjà évalué
         // On passe à la prochaine task et on reset les variables SSI on a pas encore fait toutes les Story
         if (compteurItem < lengthDeck)
@@ -206,17 +209,19 @@ public class NI_GameManager : NetworkIdentity
                 if(firstAnswer == "c")
                 {
                     Debug.Log("Pause café");
+
                     //move US à la fin
                     return;
                 }
                 else if(firstAnswer == "i")
                 {
                     Debug.Log("interrogation");
+                    deck.usdata_list[compteurItem].score = -1;
                     //move US à la fin
                     return;
                 }
                 deck.usdata_list[compteurItem].score = int.Parse(firstAnswer);
-                Debug.Log(deck.usdata_list[compteurItem].score);
+                Debug.Log(deck.usdata_list[compteurItem].titre + " " +compteurItem);
                 break;
         }
         deck.usdata_list[compteurItem].compteur++;
