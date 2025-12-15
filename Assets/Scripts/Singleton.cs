@@ -17,7 +17,8 @@ public class Singleton : MonoBehaviour
     public int              numParticipants {get; set;}
     public float            time            {get; set;}
     public GameMode         mode            {get; set;}
-    public List<string>     Players         {get; set;} 
+    public List<string>     playersName     {get; set;} 
+    public bool             revalutate      {get; set;}
 
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class Singleton : MonoBehaviour
             Destroy(this);
         else
         {
-            Players = new List<string>();
+            playersName = new List<string>();
             instance = this; 
             DontDestroyOnLoad(this);
         }
