@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using PurrNet;
+using System;
 
 public class NI_Timer : NetworkIdentity
 {
@@ -9,8 +10,22 @@ public class NI_Timer : NetworkIdentity
     public TMP_FontAsset tmpFont = null; // Assign your TMP font asset in Inspector
     [Header("Parameters")]
     public SyncVar<float> timeRemaining = new(120);
-    public bool timerIsRunning = false;
 
+    private bool _timerIsRunning;
+    public event Action onTimerStateChanged;
+
+    public bool timerIsRunning
+    {
+        get => _timerIsRunning;
+        set
+        {
+            if (_timerIsRunning == value) return; // pas de changement
+
+            _timerIsRunning = value;
+            onTimerStateChanged?.Invoke();
+        }
+    }
+    
     public TMP_Text timeText;
 
     void Start()

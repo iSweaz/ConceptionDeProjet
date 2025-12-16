@@ -98,4 +98,11 @@ public class NI_Selection : NetworkIdentity
 
         }
     }
+
+    [ObserversRpc]
+    public void DestroyCoffee()
+    {
+        GameObject card = GameObject.Find("c");
+        Destroy(card.GetComponent<BoxCollider>());
+    }
 }
