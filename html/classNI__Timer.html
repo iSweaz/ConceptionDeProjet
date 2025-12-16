@@ -92,6 +92,8 @@ $(document).ready(function(){initNavTree('classNI__Timer.html',''); initResizabl
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="#events">Events</a> &#124;
 <a href="classNI__Timer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">NI_Timer Class Reference</div></div>
 </div><!--header-->
@@ -123,10 +125,18 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acc7d7a5277303b707e5b4e937e2d1113"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b9c0e60c136352ac7dc67ac0625058" id="r_a87b9c0e60c136352ac7dc67ac0625058"><td class="memItemLeft" align="right" valign="top">SyncVar&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a87b9c0e60c136352ac7dc67ac0625058">timeRemaining</a> = new(120)</td></tr>
 <tr class="separator:a87b9c0e60c136352ac7dc67ac0625058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf9577d95ba599dd820571e1891512ef" id="r_abf9577d95ba599dd820571e1891512ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#abf9577d95ba599dd820571e1891512ef">timerIsRunning</a> = false</td></tr>
-<tr class="separator:abf9577d95ba599dd820571e1891512ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89f8cbbba7132fe85094a1e77259ab56" id="r_a89f8cbbba7132fe85094a1e77259ab56"><td class="memItemLeft" align="right" valign="top">TMP_Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a89f8cbbba7132fe85094a1e77259ab56">timeText</a></td></tr>
 <tr class="separator:a89f8cbbba7132fe85094a1e77259ab56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:abf9577d95ba599dd820571e1891512ef" id="r_abf9577d95ba599dd820571e1891512ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#abf9577d95ba599dd820571e1891512ef">timerIsRunning</a><code> [get, set]</code></td></tr>
+<tr class="separator:abf9577d95ba599dd820571e1891512ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+Events</h2></td></tr>
+<tr class="memitem:a6b6fac30ba209b3cb3deb36eb79397a9" id="r_a6b6fac30ba209b3cb3deb36eb79397a9"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__Timer.html#a6b6fac30ba209b3cb3deb36eb79397a9">onTimerStateChanged</a></td></tr>
+<tr class="separator:a6b6fac30ba209b3cb3deb36eb79397a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5e3e4c680a5d073ecf51f50411f235c9" name="a5e3e4c680a5d073ecf51f50411f235c9"></a>
@@ -279,20 +289,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abf9577d95ba599dd820571e1891512ef" name="abf9577d95ba599dd820571e1891512ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf9577d95ba599dd820571e1891512ef">&#9670;&#160;</a></span>timerIsRunning</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool NI_Timer.timerIsRunning = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a89f8cbbba7132fe85094a1e77259ab56" name="a89f8cbbba7132fe85094a1e77259ab56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89f8cbbba7132fe85094a1e77259ab56">&#9670;&#160;</a></span>timeText</h2>
 
@@ -315,6 +311,44 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">TMP_FontAsset NI_Timer.tmpFont = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="abf9577d95ba599dd820571e1891512ef" name="abf9577d95ba599dd820571e1891512ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9577d95ba599dd820571e1891512ef">&#9670;&#160;</a></span>timerIsRunning</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool NI_Timer.timerIsRunning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Event Documentation</h2>
+<a id="a6b6fac30ba209b3cb3deb36eb79397a9" name="a6b6fac30ba209b3cb3deb36eb79397a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6fac30ba209b3cb3deb36eb79397a9">&#9670;&#160;</a></span>onTimerStateChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action NI_Timer.onTimerStateChanged</td>
         </tr>
       </table>
 </div><div class="memdoc">
