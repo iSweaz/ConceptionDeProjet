@@ -4,7 +4,7 @@ var NAVTREEINDEX2 =
 "classTimer.html#aaa1d1a669064b6b60a93b3e5ec509d95":[2,0,23,1],
 "classUSData.html":[2,0,25],
 "classUSData.html#a3f895cabbe92985e2e111ef839704479":[2,0,25,1],
-"classUSData.html#a5599f0d0a53330b985efaa13be6bdf41":[2,0,25,2],
+"classUSData.html#a417ecf6291722beb731c3cc3c759a201":[2,0,25,2],
 "classUSData.html#a6e3381f036fb38019b8be956c6fccfae":[2,0,25,3],
 "classUSData.html#ae9c3b4f2ac170cd1705b28eafe254d9a":[2,0,25,0],
 "classUSJsonFile.html":[2,0,26],
