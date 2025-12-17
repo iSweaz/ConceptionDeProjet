@@ -9,7 +9,7 @@ public class USData
 {
     public string titre;
     public string desc;
-    public int score;
+    public float score;
     public int compteur;
 }
 

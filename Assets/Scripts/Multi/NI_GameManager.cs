@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using PurrNet;
 using PurrNet.Transports;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -243,12 +244,38 @@ public class NI_GameManager : NetworkIdentity
                     {
                         selectedAnswer =  "Pas unanime";
                         notAnswered = true;
-                        break;
+                        return selectedAnswer;
                     }
                 }
                 selectedAnswer = firstAnswer;
-                deck.usdata_list[compteurItem].score = int.Parse(firstAnswer);
-                Debug.Log(deck.usdata_list[compteurItem].titre + " " +compteurItem);
+                deck.usdata_list[compteurItem].score = float.Parse(firstAnswer);
+                break;
+            case Singleton.GameMode.Average :
+                float result = 0.0f;
+                for(int i = 0; i < answers.Count; i++)
+                {
+                    result+= float.Parse(answers[i]);
+                }
+                result/= answers.Count;
+                selectedAnswer = result.ToString();
+                break;
+            case Singleton.GameMode.Median :
+                List<float> values = new List<float>();
+                for (int i = 0; i < answers.Count; i++)
+                {
+                    values.Add(float.Parse(answers[i]));
+                }
+                values.Sort();
+
+                float median;
+                int n = values.Count;
+
+                if (n % 2 == 1)
+                    median = values[n / 2];
+                else
+                    median = (values[n / 2 - 1] + values[n / 2]) / 2f;
+
+                selectedAnswer = median.ToString();
                 break;
         }
         deck.usdata_list[compteurItem].compteur++;
