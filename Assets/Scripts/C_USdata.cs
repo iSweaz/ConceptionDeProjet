@@ -10,6 +10,15 @@ public class USData
     public string titre;
     public string desc;
     public int score;
+    public int compteur;
+
+    public USData()
+    {
+        titre = "Titre";
+        desc = "Description";
+        score = -1;
+        compteur = 0;
+    }
 }
 
 /// <summary>

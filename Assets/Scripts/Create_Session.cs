@@ -9,14 +9,14 @@ using UnityEngine.UI;
 public class Create_Session : MonoBehaviour
 {
     private string debugHeader = "[Create_Session] ";
-    [SerializeField]   private Button createSessionButton;
-    [SerializeField]   private Button createDeckButton;
-    [SerializeField]   private Button modifyDeckButton;
-    [SerializeField]   private Button importDeckButton;
-    [SerializeField]   private TMP_Dropdown mode;
-    [SerializeField]   private TMP_InputField pseudo,sizeSession,time;
-    [SerializeField]   private TMP_Text TMPdeckPreview;
-    [SerializeField]   private TMP_Text TMPdeckTitle;
+    public Button createSessionButton;
+    public Button createDeckButton;
+    public Button modifyDeckButton;
+    public Button importDeckButton;
+    public TMP_Dropdown mode;
+    public TMP_InputField pseudo,sizeSession,time;
+    public TMP_Text TMPdeckPreview;
+    public TMP_Text TMPdeckTitle;
     private Singleton instance;
 
     void Start()
