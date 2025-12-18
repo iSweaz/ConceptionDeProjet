@@ -1,5 +1,6 @@
 var classUSData =
 [
+    [ "USData", "classUSData.html#abf8ae33265005d18fce9cccbf99d5a05", null ],
     [ "compteur", "classUSData.html#ae9c3b4f2ac170cd1705b28eafe254d9a", null ],
     [ "desc", "classUSData.html#a3f895cabbe92985e2e111ef839704479", null ],
     [ "score", "classUSData.html#a417ecf6291722beb731c3cc3c759a201", null ],

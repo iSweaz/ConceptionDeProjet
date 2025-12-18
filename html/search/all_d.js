@@ -11,5 +11,10 @@ var searchData=
   ['popuppanelsbackgroundcolor_8',['PopupPanelsBackgroundColor',['../classSimpleFileBrowser_1_1UISkin.html#ad4e1d23dd11eb6727c4b9f6dff8eedac',1,'SimpleFileBrowser::UISkin']]],
   ['popuppanelstextcolor_9',['PopupPanelsTextColor',['../classSimpleFileBrowser_1_1UISkin.html#a3dae2b3d2f7d39a036e771405347f430',1,'SimpleFileBrowser::UISkin']]],
   ['position_10',['Position',['../classSimpleFileBrowser_1_1ListItem.html#acf66424b18240f38f133eab4ef5680bb',1,'SimpleFileBrowser::ListItem']]],
-  ['prefabus_11',['prefabUs',['../classMB__CreateDeckManager.html#a0e03db6a88166f85d6b66409eef06faf',1,'MB_CreateDeckManager']]]
+  ['prefabus_11',['prefabUs',['../classMB__CreateDeckManager.html#a0e03db6a88166f85d6b66409eef06faf',1,'MB_CreateDeckManager']]],
+  ['processanswerbygamemode_12',['ProcessAnswerByGameMode',['../classManager.html#af4bffd4f9f7919b84f3373113f0e71dc',1,'Manager']]],
+  ['processgamemode_5faverage_13',['ProcessGameMode_Average',['../classManager.html#a3fb1eb776c8ee00895885e99478f9ebd',1,'Manager']]],
+  ['processgamemode_5fmedian_14',['ProcessGameMode_Median',['../classManager.html#a798bb0a8899a6d312ce1cbc65d2dca34',1,'Manager']]],
+  ['processgamemode_5funanimity_15',['ProcessGameMode_Unanimity',['../classManager.html#a5e0f403fa63f07be6e5eed449221306d',1,'Manager']]],
+  ['pseudo_16',['pseudo',['../classCreate__Session.html#a30c0602bdc00162fb99b5497d468060f',1,'Create_Session']]]
 ];

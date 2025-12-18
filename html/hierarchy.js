@@ -85,6 +85,7 @@ var hierarchy =
     ] ],
     [ "SFB.StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ],
     [ "T_DisplayBoard", "classT__DisplayBoard.html", null ],
+    [ "T_GameModes", "classT__GameModes.html", null ],
     [ "T_USData", "classT__USData.html", null ],
     [ "T_USJsonFile", "classT__USJsonFile.html", null ],
     [ "USData", "classUSData.html", null ],
