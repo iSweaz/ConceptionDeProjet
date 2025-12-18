@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
-/// Classe qui gère la scène de création/modification de deck 
+/// Classe qui gï¿½re la scï¿½ne de crï¿½ation/modification de deck 
 /// </summary>
 public class MB_CreateDeckManager : MonoBehaviour
 {
     Singleton instance;
     public GameObject contentFitter;
     public Button prefabUs;
-    [Header("Champs de création/édition")]
+    [Header("Champs de crï¿½ation/ï¿½dition")]
     public TMP_Text headerText;
     public Button deleteButton;
     public Button editButton;
@@ -28,13 +28,13 @@ public class MB_CreateDeckManager : MonoBehaviour
     public TMP_InputField deckTitle;
     [Header("Autre")]
     public string menuScene;
-    int selectedUS = -1; // US actuellement sélectionnée, défault à -1
+    int selectedUS = -1; // US actuellement sï¿½lectionnï¿½e, dï¿½fault ï¿½ -1
     byte newStoryMode = 1;  // 1 == create, 2 == modify
     //public TMP_Text deckPreview;
 
     void Start()
     {
-        instance = Singleton.instance; // On récupère l'instance active du Singleton
+        instance = Singleton.instance; // On rï¿½cupï¿½re l'instance active du Singleton
         //if (instance.deck != null) deckPreview.text = instance.deck.FormatDeckToString();
         if (instance.deck != null)
         {
@@ -46,9 +46,9 @@ public class MB_CreateDeckManager : MonoBehaviour
 
     private void Update()
     {
-        applyButton.interactable = !(titleInput.text == string.Empty || descInput.text == string.Empty); // On update applyButton selon l'état des champs
-        deleteButton.interactable = (selectedUS != -1); // On update deleteButton selon l'état de selectedUS
-        editButton.interactable = (selectedUS != -1 && newStoryMode == 1); // On update editButton selon l'état de selectedUS
+        applyButton.interactable = !(titleInput.text == string.Empty || descInput.text == string.Empty); // On update applyButton selon l'ï¿½tat des champs
+        deleteButton.interactable = (selectedUS != -1); // On update deleteButton selon l'ï¿½tat de selectedUS
+        editButton.interactable = (selectedUS != -1 && newStoryMode == 1); // On update editButton selon l'ï¿½tat de selectedUS
         if (newStoryMode == 1) applyText.text = "Create story";
         else applyText.text = "Apply changes";
         if (instance.deck.usdata_list.Count >= 1) saveAsButton.interactable = true;
@@ -60,7 +60,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     /// </summary>
     void UpdateDeckPreview()
     {
-        // On clear entièrement le contentFitter
+        // On clear entiï¿½rement le contentFitter
         foreach (Transform child in contentFitter.transform)
         {
             GameObject.Destroy(child.gameObject);
@@ -78,7 +78,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Créer et retourne un nouveau UsButton
+    /// Crï¿½er et retourne un nouveau UsButton
     /// </summary>
     /// <param name="_texte"></param>
     /// <returns></returns>
@@ -87,7 +87,7 @@ public class MB_CreateDeckManager : MonoBehaviour
         // Instancie le prefab
         Button newButton = Instantiate(prefabUs);
 
-        // Définit le parent
+        // Dï¿½finit le parent
         newButton.transform.SetParent(contentFitter.transform, false);
 
         //  Modifie le texte du bouton
@@ -100,7 +100,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur une UsStory
+    /// Fonction qui rï¿½agit au clic sur une UsStory
     /// </summary>
     /// <param name="index"></param>
     public void OnUsClicked(int index)
@@ -115,7 +115,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur "Edit"
+    /// Fonction qui rï¿½agit au clic sur "Edit"
     /// </summary>
     public void OnEditClicked()
     {
@@ -128,7 +128,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur "Cancel"
+    /// Fonction qui rï¿½agit au clic sur "Cancel"
     /// </summary>
     public void OnCancelClicked()
     {
@@ -142,7 +142,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur "Apply"
+    /// Fonction qui rï¿½agit au clic sur "Apply"
     /// </summary>
     public void OnApplyClicked()
     {
@@ -153,6 +153,7 @@ public class MB_CreateDeckManager : MonoBehaviour
             newItem.titre = titleInput.text;
             newItem.desc = descInput.text;
             newItem.score = -1;
+            newItem.compteur = 0;
             instance.deck.usdata_list.Add(newItem);
             titleInput.text = "";
             descInput.text = "";
@@ -176,7 +177,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur "Save As"
+    /// Fonction qui rï¿½agit au clic sur "Save As"
     /// </summary>
     public void OnSaveAsClicked()
     {
@@ -185,7 +186,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur "Back to main menu"
+    /// Fonction qui rï¿½agit au clic sur "Back to main menu"
     /// </summary>
     public void OnBackClicked()
     {
@@ -194,7 +195,7 @@ public class MB_CreateDeckManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction qui delete la story à l'index selectedUS
+    /// Fonction qui delete la story ï¿½ l'index selectedUS
     /// </summary>
     public void DeleteStory()
     {

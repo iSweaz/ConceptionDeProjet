@@ -1,0 +1,17 @@
+{
+  "title": "Feur",
+  "usdata_list": [
+    {
+      "titre": "Create procedural mob",
+      "desc": "Generate procedural cloth for these mobs",
+      "score": 8.0,
+      "compteur": 10
+    },
+    {
+      "titre": "switch ",
+      "desc": "il a switch wallah",
+      "score": 8.0,
+      "compteur": 4
+    }
+  ]
+}

@@ -4,7 +4,7 @@ using UnityEngine;
 public class NI_Selection : NetworkIdentity
 {
     Camera cam;
-    public string playerAnswer = "i";
+    public string answer = "i";
 
     private GameObject lastObject = null;
 
@@ -54,10 +54,9 @@ public class NI_Selection : NetworkIdentity
     }
 
     [ServerRpc]
-    void ChangeAnwser(string answer)
+    void ChangeAnwser(string newAnswer)
     {
-        playerAnswer = answer;
-        Debug.Log("Change value : " + playerAnswer);
+        answer = newAnswer;
     }
     
 
@@ -65,8 +64,8 @@ public class NI_Selection : NetworkIdentity
     public void resetValue()
     {
         Debug.Log("Reset");
-        ChangeColor(null);
-        playerAnswer ="i";
+        ChangeColor(null); // On réinitialise l'état de toutes les cartes
+        answer = "i"; // On remet player.answer à sa valeur par défaut
     }
 
     /// <summary>
@@ -80,7 +79,6 @@ public class NI_Selection : NetworkIdentity
             if(manager)
             {
                 manager.players.Add(this);
-                manager.Answers.Add(playerAnswer);
             }
         }
     }
@@ -96,9 +94,15 @@ public class NI_Selection : NetworkIdentity
             if(manager)
             {
                 manager.players.Remove(this);
-                manager.Answers.Remove(playerAnswer);                
             }
 
         }
+    }
+
+    [ObserversRpc]
+    public void DestroyCoffee()
+    {
+        GameObject card = GameObject.Find("c");
+        Destroy(card.GetComponent<BoxCollider>());
     }
 }

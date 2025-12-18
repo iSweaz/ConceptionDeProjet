@@ -7,7 +7,7 @@ using UnityEngine;
 public static class C_DeckFunctions
 {
     /// <summary>
-    /// Fonction qui crée une user story et l'ajoute à la liste des users stories
+    /// Fonction qui crï¿½e une user story et l'ajoute ï¿½ la liste des users stories
     /// </summary>
     /// <param name="title">Titre de la user story</param>
     /// <param name="desc">Description de la user story (non obligatoire)</param>
@@ -25,7 +25,7 @@ public static class C_DeckFunctions
     }
 
     /// <summary>
-    /// Fonction de sauvegarde automatique du deck en .json. Le deck doit avoir été préalablement chargé
+    /// Fonction de sauvegarde automatique du deck en .json. Le deck doit avoir ï¿½tï¿½ prï¿½alablement chargï¿½
     /// </summary>
     /// <param name="deck"></param>
     public static void AutoSaveDeck(USJsonFile deck)
@@ -41,7 +41,7 @@ public static class C_DeckFunctions
     /// Fonction qui sauvegarde le deck en .json, avec le titre du deck et la liste contenant les users stories
     /// </summary>
     /// <param name="deck">Type avec titre du deck + la liste qui contient les users stories</param>
-    /// <param name="deckTitle">Titre du deck ("Titre" par défaut s'il n'est pas renseigné)</param>
+    /// <param name="deckTitle">Titre du deck ("Titre" par dï¿½faut s'il n'est pas renseignï¿½)</param>
     public static void SaveDeck(USJsonFile deck, string deckTitle)
     {
         if (deckTitle != "")
@@ -60,9 +60,9 @@ public static class C_DeckFunctions
     }
 
     /// <summary>
-    /// Fonction qui charge le deck à partir d'un .json
+    /// Fonction qui charge le deck ï¿½ partir d'un .json
     /// </summary>
-    /// <returns>Deck chargé ou null en cas de problème</returns>
+    /// <returns>Deck chargï¿½ ou null en cas de problï¿½me</returns>
     public static USJsonFile LoadDeck()
     {
         string path = C_PathManager.LoadFindPath();
@@ -77,7 +77,7 @@ public static class C_DeckFunctions
     }
 
     /// <summary>
-    /// Fonction qui vérifie le titre (non vide et pas déjà utilisé)
+    /// Fonction qui vï¿½rifie le titre (non vide et pas dï¿½jï¿½ utilisï¿½)
     /// </summary>
     /// <param name="title">Titre de la user story</param>
     /// <param name="us_list">Liste qui contient les users stories</param>
@@ -90,20 +90,20 @@ public static class C_DeckFunctions
             {
                 if (us_list[i].titre == title)
                 {
-                    Debug.Log("Titre déjà utilisé pour une autre user story");
+                    Debug.Log("Titre dï¿½jï¿½ utilisï¿½ pour une autre user story");
                     return false;
                 }
             }
             return true;
         }
-        Debug.Log("Il faut renseigner un titre à la user story");
+        Debug.Log("Il faut renseigner un titre ï¿½ la user story");
         return false;
     }
 
     /// <summary>
     /// Fonction qui log le contenu du deck dans la console
     /// </summary>
-    /// <param name="deck">Deck à log</param>
+    /// <param name="deck">Deck ï¿½ log</param>
     public static void LogDeck(USJsonFile deck)
     {
         string _log = "";
@@ -116,6 +116,6 @@ public static class C_DeckFunctions
             _log += "\n" + "    Description : " + deck.usdata_list[i].desc;
             _log += "\n" + "    --------------------------";
         }
-        Debug.Log(_log);
+        // Debug.Log(_log);
     }
 }

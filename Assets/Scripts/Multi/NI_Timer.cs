@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using PurrNet;
+using System;
 
 public class NI_Timer : NetworkIdentity
 {
@@ -9,8 +10,22 @@ public class NI_Timer : NetworkIdentity
     public TMP_FontAsset tmpFont = null; // Assign your TMP font asset in Inspector
     [Header("Parameters")]
     public SyncVar<float> timeRemaining = new(120);
-    public bool timerIsRunning = true;
 
+    private bool _timerIsRunning;
+    public event Action onTimerStateChanged;
+
+    public bool timerIsRunning
+    {
+        get => _timerIsRunning;
+        set
+        {
+            if (_timerIsRunning == value) return; // pas de changement
+
+            _timerIsRunning = value;
+            onTimerStateChanged?.Invoke();
+        }
+    }
+    
     public TMP_Text timeText;
 
     void Start()
@@ -23,19 +38,36 @@ public class NI_Timer : NetworkIdentity
     [ServerOnly]
     void Update()
     {
-         if (timerIsRunning)
+        if (timerIsRunning)
         {
-            if (timeRemaining.value > 0)
+            timeRemaining.value -= Time.deltaTime;
+            DisplayTime(timeRemaining);
+
+            if (timeRemaining.value <= 0f)
             {
-                timeRemaining.value -= Time.deltaTime;
-                DisplayTime(timeRemaining);
-            }
-            else
-            {
-                timeRemaining.value = 0;
+                timeRemaining.value = 0f; // clamp à 0
+                stopTimer();
             }
         }
     }
+
+    /// <summary>
+    /// Fonction qui lance le timer
+    /// </summary>
+    /// <param name="timeRemaining"></param>
+    public void startTimer(float timeRemaining)
+    {
+        timerIsRunning = true;
+        this.timeRemaining.value = timeRemaining;
+    }
+
+    [ObserversRpc]
+    public void stopTimer()
+    {
+        timerIsRunning = false; // On passe � false le bool�en qui permet d'entrer dans la boucle
+        timeText.text = ""; // On reset le texte
+    }
+
     public void launchTimer()
     {
         timerIsRunning = true;

@@ -2,23 +2,15 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 
 /// <summary>
-///  Classe qui contient les différentes datas propres aux users stories : titre, desc et score
+///  Classe qui contient les diffï¿½rentes datas propres aux users stories : titre, desc et score
 /// </summary>
 [System.Serializable]
 public class USData
 {
     public string titre;
     public string desc;
-    public int score;
+    public float score;
     public int compteur;
-
-    public USData()
-    {
-        titre = "Titre";
-        desc = "Description";
-        score = -1;
-        compteur = 0;
-    }
 }
 
 /// <summary>
@@ -28,7 +20,7 @@ public class USData
 public class USJsonFile
 {
     public string title;
-    [JsonIgnore] public string filePath; // Path du fichier, non sauvegardé dans le JSON
+    [JsonIgnore] public string filePath; // Path du fichier, non sauvegardï¿½ dans le JSON
     public List<USData> usdata_list;
 
     public USJsonFile()

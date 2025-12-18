@@ -1,22 +1,28 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 /// <summary>
-/// Mono-behavior qui gère l'écran de création de session
+/// Mono-behavior qui gï¿½re l'ï¿½cran de crï¿½ation de session
 /// </summary>
 public class Create_Session : MonoBehaviour
 {
     private string debugHeader = "[Create_Session] ";
-    public Button createSessionButton;
-    public Button createDeckButton;
-    public Button modifyDeckButton;
-    public Button importDeckButton;
-    public TMP_Dropdown mode;
-    public TMP_InputField pseudo,sizeSession,time;
-    public TMP_Text TMPdeckPreview;
-    public TMP_Text TMPdeckTitle;
+    [SerializeField]   private Button createSessionButton;
+    [SerializeField]   private Button createDeckButton;
+    [SerializeField]   private Button modifyDeckButton;
+    [SerializeField]   private Button importDeckButton;
+    [SerializeField]   private TMP_Dropdown mode;
+    [SerializeField]   private TMP_InputField pseudo,sizeSession,time;
+    [SerializeField]   private TMP_Text TMPdeckPreview;
+    [SerializeField]   private TMP_Text TMPdeckTitle;
+    [SerializeField]   private Toggle toggle;
+    
+
+    [Header("Secene to load")]
+    [SerializeField]   private string scene = "Meeting_Room";
     private Singleton instance;
 
     void Start()
@@ -45,14 +51,11 @@ public class Create_Session : MonoBehaviour
         instance.numParticipants = int.Parse(sizeSession.text);
         instance.time =  float.Parse(time.text);
         SetModeValue();
-        instance.Players.Add(pseudo.text);
+        instance.playersName.Add(pseudo.text);
+        Debug.Log(toggle.isOn);
+        instance.revalutate = toggle.isOn;
 
-        Debug.Log(instance.time);
-        Debug.Log(instance.numParticipants);
-        Debug.Log(instance.mode);
-        Debug.Log(instance.Players[0]);
-
-        SceneManager.LoadScene("Meeting_Room");
+        SceneManager.LoadScene(scene);
     }
 
     void SetModeValue()
@@ -85,10 +88,10 @@ public class Create_Session : MonoBehaviour
         }
     }
 
-    #region Fonctions réactives aux buttons (voir dans l'inspector les évènements OnClick() des buttons)
+    #region Fonctions rï¿½actives aux buttons (voir dans l'inspector les ï¿½vï¿½nements OnClick() des buttons)
 
     /// <summary>
-    /// Fonction déclenchée quand l'utilisateur clique sur le button "Create Deck". Crée un fichier JSon à l'endroit choisi.
+    /// Fonction dï¿½clenchï¿½e quand l'utilisateur clique sur le button "Create Deck". Crï¿½e un fichier JSon ï¿½ l'endroit choisi.
     /// </summary>
     public void CreateDeck()
     {
@@ -98,30 +101,42 @@ public class Create_Session : MonoBehaviour
     }
 
     /// <summary>
-    /// Fonction déclenchée quand l'utilisateur clique sur Modify deck. Ouvre la scène de gestion de deck.
+    /// Fonction dï¿½clenchï¿½e quand l'utilisateur clique sur Modify deck. Ouvre la scï¿½ne de gestion de deck.
     /// </summary>
     public void ModifyDeck()
     {
         SceneManager.LoadScene("DeckCreation");
     }
     /// <summary>
-    /// Fonction déclenchée lorsque l'utilisateur clique sur le button "Import Deck". Charge un .JSON, actualise la preview de deck et passe les données chargées au Singleton.
+    /// Fonction dï¿½clenchï¿½e lorsque l'utilisateur clique sur le button "Import Deck". Charge un .JSON, actualise la preview de deck et passe les donnï¿½es chargï¿½es au Singleton.
     /// </summary>
     public void ImportDeck()
     {
         USJsonFile importedDeck = C_DeckFunctions.LoadDeck();
         if (importedDeck != null)
         {
-            instance.deck = importedDeck; // On passe le deck chargé au singleton
+            instance.deck = importedDeck; // On passe le deck chargï¿½ au singleton
             C_DeckFunctions.LogDeck(importedDeck);
             // On actualise la preview de deck
             TMPdeckPreview.text = instance.deck.FormatDeckToString();
             TMPdeckTitle.text = instance.deck.title;
             modifyDeckButton.interactable = true;
+            CheckUSState();
         }
-        else Debug.Log(debugHeader + "Importation d'un deck annulée");
+        else Debug.Log(debugHeader + "Importation d'un deck annulï¿½e");
+        
     }
 
     #endregion
-
+    void CheckUSState()
+    {
+        foreach(var US in instance.deck.usdata_list)
+        {
+            if(US.score != -1)
+            {
+                toggle.gameObject.SetActive(true);
+                return;
+            }
+        }
+    }
 }
