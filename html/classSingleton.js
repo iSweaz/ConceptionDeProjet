@@ -10,6 +10,7 @@ var classSingleton =
     [ "deck", "classSingleton.html#a0cc9918c7ba0b4798684f7a724c23ae9", null ],
     [ "mode", "classSingleton.html#a94940a1c9bc22418de43a734ad0d7ed8", null ],
     [ "numParticipants", "classSingleton.html#a5dc38d31cc516325c67e20f82dd1e0d2", null ],
-    [ "Players", "classSingleton.html#a93b546ff62918026fd992508e0e16340", null ],
+    [ "playersName", "classSingleton.html#ad640e6e2f07810986aed40f6068e14f4", null ],
+    [ "revalutate", "classSingleton.html#a70e8bfc093476634b8edee49c2f7f8f0", null ],
     [ "time", "classSingleton.html#ab819ea9f65f9df77eec1779b74d27005", null ]
 ];
