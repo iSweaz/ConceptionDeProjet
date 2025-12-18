@@ -5,12 +5,11 @@ var indexSectionsWithContent =
   2: "s",
   3: "bcdefilmnrstu",
   4: "acdefghilmoprstuw",
-  5: "abcdefhimnoprstu",
+  5: "abcdefhimnopstu",
   6: "gop",
   7: "adfgmorsu",
   8: "abcdfhimnoprstvw",
-  9: "o",
-  10: "c"
+  9: "c"
 };
 
 var indexSectionNames =
@@ -24,8 +23,7 @@ var indexSectionNames =
   6: "enums",
   7: "enumvalues",
   8: "properties",
-  9: "events",
-  10: "pages"
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -39,7 +37,6 @@ var indexSectionLabels =
   6: "Enumerations",
   7: "Enumerator",
   8: "Properties",
-  9: "Events",
-  10: "Pages"
+  9: "Pages"
 };
 

@@ -84,6 +84,9 @@ var hierarchy =
       [ "SimpleFileBrowser.UISkin", "classSimpleFileBrowser_1_1UISkin.html", null ]
     ] ],
     [ "SFB.StandaloneFileBrowser", "classSFB_1_1StandaloneFileBrowser.html", null ],
+    [ "T_DisplayBoard", "classT__DisplayBoard.html", null ],
+    [ "T_USData", "classT__USData.html", null ],
+    [ "T_USJsonFile", "classT__USJsonFile.html", null ],
     [ "USData", "classUSData.html", null ],
     [ "Deck.userStoryData", "classDeck_1_1userStoryData.html", null ],
     [ "Deck.UserStorys", "classDeck_1_1UserStorys.html", null ],

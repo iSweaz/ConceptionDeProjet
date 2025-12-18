@@ -3,7 +3,7 @@ var searchData=
   ['editbutton_0',['editButton',['../classMB__CreateDeckManager.html#a57b6f32a0c17386007b047a4d3b36651',1,'MB_CreateDeckManager']]],
   ['eventsystemhandler_1',['EventSystemHandler',['../classSimpleFileBrowser_1_1EventSystemHandler.html',1,'SimpleFileBrowser']]],
   ['eventsystemhandler_2ecs_2',['EventSystemHandler.cs',['../EventSystemHandler_8cs.html',1,'']]],
-  ['extension_3',['extension',['../structSimpleFileBrowser_1_1FileSystemEntry.html#a818987e7838fd711f5c468bad59cc372',1,'SimpleFileBrowser.FileSystemEntry.Extension'],['../structSimpleFileBrowser_1_1FiletypeIcon.html#a8b545a523d0288df5ceffae2c091f8f1',1,'SimpleFileBrowser.FiletypeIcon.extension']]],
+  ['extension_3',['extension',['../structSimpleFileBrowser_1_1FiletypeIcon.html#a8b545a523d0288df5ceffae2c091f8f1',1,'SimpleFileBrowser.FiletypeIcon.extension'],['../structSimpleFileBrowser_1_1FileSystemEntry.html#a818987e7838fd711f5c468bad59cc372',1,'SimpleFileBrowser.FileSystemEntry.Extension']]],
   ['extensionfilter_4',['extensionfilter',['../structSFB_1_1ExtensionFilter.html',1,'SFB.ExtensionFilter'],['../structSFB_1_1ExtensionFilter.html#a18e815fda33824095d74b0952548c7e6',1,'SFB.ExtensionFilter.ExtensionFilter(string filterName, params string[] filterExtensions)']]],
   ['extensions_5',['extensions',['../structSFB_1_1ExtensionFilter.html#a0c42baf566fe3a626b23b92c498b0867',1,'SFB.ExtensionFilter.Extensions'],['../classSimpleFileBrowser_1_1FileBrowser_1_1Filter.html#a1764ccdaa001a947b9511f47923cae88',1,'SimpleFileBrowser.FileBrowser.Filter.extensions']]],
   ['extensionsset_6',['extensionsSet',['../classSimpleFileBrowser_1_1FileBrowser_1_1Filter.html#a61cd484c2f5eff9524e938ab41d78503',1,'SimpleFileBrowser::FileBrowser::Filter']]]
