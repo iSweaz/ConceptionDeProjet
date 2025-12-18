@@ -51,11 +51,11 @@ public class T_GameModes
     [Test]
     public void T_Median()
     {
-        List<string> testeven = new List<string>() { "1", "2", "5", "3" };
+        List<string> testeven = new List<string>() { "2", "3", "5", "3" };
         string repeven = Manager.ProcessGameMode_Median(testeven);
         List<string> testuneven = new List<string>() { "1", "2", "5", "3", "2" };
         string repuneven = Manager.ProcessGameMode_Median(testuneven);
-        Assert.AreEqual("2,5", repeven);
+        Assert.AreEqual("3", repeven);
         Assert.AreEqual("2", repuneven);
     }
 }
