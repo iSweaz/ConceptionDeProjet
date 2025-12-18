@@ -1,3 +1,5 @@
+using PurrNet;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,8 +35,8 @@ public class Manager : MonoBehaviour
         lengthDeck = deck.usdata_list.Count();
         
         blackBoard = FindFirstObjectByType<Display_Unit>();
-        // blackBoard.deck = deck;
-        // blackBoard.ChangeDisplay(compteurItem);
+        blackBoard.deck = deck;
+        blackBoard.ChangeDisplay(compteurItem);
 
         timer = FindFirstObjectByType<Timer>();
         timeRemaining = instance.time;
@@ -87,6 +89,95 @@ public class Manager : MonoBehaviour
             blackBoard.ChangeDisplay(compteurItem); // On actualise l'affichage tableau
         }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="gameMode"></param>
+    /// <param name="answers"></param>
+    /// <returns></returns>
+    public static string ProcessAnswerByGameMode(Singleton.GameMode gameMode, List<string> answers)
+    {
+        if (answers.Contains("c"))
+        {
+            return "Quelqu'un demande une pause";
+        }
+        else if (answers.Contains("i"))
+        {
+            return "Quelqu'un n'a pas compris la tache";
+        }
+
+        switch (gameMode)
+        {
+            case Singleton.GameMode.Unanimity: return ProcessGameMode_Unanimity(answers);
+            case Singleton.GameMode.Average: return ProcessGameMode_Average(answers);
+            case Singleton.GameMode.Median: return ProcessGameMode_Median(answers);
+            default: return "Erreur : GameMode non pris en charge.";
+        }
+    }
+
+    #region Fonctions propres à chaque gameMode
+
+    /// <summary>
+    /// Fonction qui process la liste des réponses si le game mode est set à "Unanimity"
+    /// </summary>
+    /// <param name="answers"></param>
+    /// <returns></returns>
+    public static string ProcessGameMode_Unanimity(List<string> answers)
+    {
+        string firstAnswer = answers[0];
+        for (int i = 1; i < answers.Count; i++)
+        {
+            if (answers[i] != firstAnswer)
+            {
+                return "Pas unanime";
+            }
+        }
+        return firstAnswer;
+    }
+
+    /// <summary>
+    /// Fonction qui process la liste des réponses si le game mode est set à "Average"
+    /// </summary>
+    /// <param name="answers"></param>
+    /// <returns></returns>
+    public static string ProcessGameMode_Average(List<string> answers)
+    {
+        float result = 0.0f;
+        for (int i = 0; i < answers.Count; i++)
+        {
+            result += float.Parse(answers[i]);
+        }
+        result /= answers.Count;
+        return result.ToString();
+    }
+
+    /// <summary>
+    /// Fonction qui process la liste des réponses si le game mode est set à "Median"
+    /// </summary>
+    /// <param name="answers"></param>
+    /// <returns></returns>
+    public static string ProcessGameMode_Median(List<string> answers)
+    {
+        List<float> values = new List<float>();
+        for (int i = 0; i < answers.Count; i++)
+        {
+            values.Add(float.Parse(answers[i]));
+        }
+        values.Sort();
+
+        float median;
+        int n = values.Count;
+
+        if (n % 2 == 1)
+            median = values[n / 2];
+        else
+            median = (values[n / 2 - 1] + values[n / 2]) / 2f;
+
+        return median.ToString();
+    }
+
+    #endregion
 
     /// <summary>
     /// Fonction qui gère le résultat de la carte sélectionnée par l'utilisateur

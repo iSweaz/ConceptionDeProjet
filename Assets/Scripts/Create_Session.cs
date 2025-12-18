@@ -15,7 +15,7 @@ public class Create_Session : MonoBehaviour
     [SerializeField]   private Button modifyDeckButton;
     [SerializeField]   private Button importDeckButton;
     [SerializeField]   private TMP_Dropdown mode;
-    [SerializeField]   private TMP_InputField pseudo,sizeSession,time;
+    public TMP_InputField pseudo,sizeSession,time;
     [SerializeField]   private TMP_Text TMPdeckPreview;
     [SerializeField]   private TMP_Text TMPdeckTitle;
     [SerializeField]   private Toggle toggle;
@@ -56,6 +56,17 @@ public class Create_Session : MonoBehaviour
         instance.revalutate = toggle.isOn;
 
         SceneManager.LoadScene(scene);
+    }
+
+    public void LoadOld()
+    {
+        instance.numParticipants = int.Parse(sizeSession.text);
+        instance.time = float.Parse(time.text);
+        SetModeValue();
+        instance.playersName.Add(pseudo.text);
+        instance.revalutate = toggle.isOn;
+
+        SceneManager.LoadScene("Meeting_Room");
     }
 
     void SetModeValue()

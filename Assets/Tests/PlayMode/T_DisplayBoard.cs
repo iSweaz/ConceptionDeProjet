@@ -23,7 +23,7 @@ public class T_DisplayBoard
         instance.deck.usdata_list.Add(new USData() { titre = "Titre2", desc = "Desc2" });
         string path = Application.dataPath + "FileTest.json";
         instance.deck.filePath = path;
-        session.Load();
+        session.LoadOld();
         yield return null;
     }
 

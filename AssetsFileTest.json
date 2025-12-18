@@ -4,13 +4,13 @@
     {
       "titre": "Titre",
       "desc": "Desc",
-      "score": -1,
+      "score": -1.0,
       "compteur": 0
     },
     {
       "titre": "Titre2",
       "desc": "Desc2",
-      "score": -1,
+      "score": -1.0,
       "compteur": 0
     }
   ]
