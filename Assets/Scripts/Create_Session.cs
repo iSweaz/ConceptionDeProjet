@@ -35,6 +35,11 @@ public class Create_Session : MonoBehaviour
             TMPdeckPreview.text = instance.deck.FormatDeckToString();
             TMPdeckTitle.text = instance.deck.title;
         }
+        if(instance.numParticipants != 0)sizeSession.text = instance.numParticipants.ToString();
+        if(instance.time != 0) time.text = instance.time.ToString();
+        mode.value = (int)instance.mode;
+        if(instance.playersName.Count > 0) pseudo.text = instance.playersName[0];
+        toggle.isOn = instance.revalutate;
     }
 
     private void Update()
@@ -48,13 +53,7 @@ public class Create_Session : MonoBehaviour
     /// </summary>
     public void Load()
     {
-        instance.numParticipants = int.Parse(sizeSession.text);
-        instance.time =  float.Parse(time.text);
-        SetModeValue();
-        instance.playersName.Add(pseudo.text);
-        Debug.Log(toggle.isOn);
-        instance.revalutate = toggle.isOn;
-
+        SaveSingleton();
         SceneManager.LoadScene(scene);
     }
 
@@ -108,6 +107,7 @@ public class Create_Session : MonoBehaviour
     {
         USJsonFile newDeck = new USJsonFile();
         instance.deck = newDeck;
+        SaveSingleton();
         SceneManager.LoadScene("DeckCreation");
     }
 
@@ -116,6 +116,7 @@ public class Create_Session : MonoBehaviour
     /// </summary>
     public void ModifyDeck()
     {
+        SaveSingleton();
         SceneManager.LoadScene("DeckCreation");
     }
     /// <summary>
@@ -149,5 +150,14 @@ public class Create_Session : MonoBehaviour
                 return;
             }
         }
+    }
+
+    void SaveSingleton()
+    {
+        instance.numParticipants = int.Parse(sizeSession.text);
+        instance.time =  float.Parse(time.text);
+        SetModeValue();
+        instance.playersName.Add(pseudo.text);
+        instance.revalutate = toggle.isOn;
     }
 }

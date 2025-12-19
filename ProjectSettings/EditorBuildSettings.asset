@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu_Connection.unity
+    guid: ace8e0f24527bb4468fb39524346e847
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 4c384a8522c2f964bb34c7ed85fa124e
   - enabled: 1
@@ -20,15 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeckCreation.unity
     guid: 48d0f57e7bed0d849a46ae0adfe77e94
+  - enabled: 1
+    path: Assets/Scenes/Test_Multi.unity
+    guid: 03ae69a436ca67e4697eca9bcf2249d6
   - enabled: 0
     path: Assets/Scenes/Bootstrap.unity
     guid: ab37089c31657034bb7bc295df6e70dc
   - enabled: 0
     path: Assets/Scenes/Create_deck.unity
-    guid: 889223b4f44f75c4da5e82c1844a8aec
-  - enabled: 1
-    path: Assets/Scenes/Test_Multi.unity
-    guid: 03ae69a436ca67e4697eca9bcf2249d6
+    guid: ffd1f6f10d2398543a95b81faa4c794a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

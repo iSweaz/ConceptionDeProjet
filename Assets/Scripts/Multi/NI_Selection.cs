@@ -1,16 +1,20 @@
 using PurrNet;
 using UnityEngine;
+using System.Linq;
+
 
 public class NI_Selection : NetworkIdentity
 {
     Camera cam;
     public string answer = "i";
-
+    [SerializeField] private MB_DestroyCollider card;
     private GameObject lastObject = null;
 
     void Start()
     {
         cam = GetComponent<Camera>();
+        card = gameObject.transform.parent.GetComponentInChildren<MB_DestroyCollider>();
+
     }
 
     void  Update()
@@ -102,7 +106,6 @@ public class NI_Selection : NetworkIdentity
     [ObserversRpc]
     public void DestroyCoffee()
     {
-        GameObject card = GameObject.Find("c");
-        Destroy(card.GetComponent<BoxCollider>());
+        card.destroyCollider();    
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using PurrNet;
 using PurrNet.Transports;
 using Unity.Mathematics;
@@ -19,8 +20,7 @@ public class NI_GameManager : NetworkIdentity
 
     Singleton instance;
     public UDPTransport udp;
-
-
+    bool server = true;
     #region Deck
         [Header("Deck")]
         [SerializeField] public USJsonFile deck;
@@ -34,15 +34,36 @@ public class NI_GameManager : NetworkIdentity
     [Header("List")]
     public SyncList<string> answers = new SyncList<string>();    // À changer quand on commencera le multi. Voir si on fait une préfab ou si chaque joueur à sa propre scène et à ce moment pas besoin d'y touché
     public List<NI_Selection> players = new List<NI_Selection>(); //réf players
+
+
+    void Start()
+    {   
+        instance = FindFirstObjectByType<Singleton>();
+        string ip = C_NetworkUtils.GetLocalIP();
+        Debug.Log("Adresse ip : " + ip);
+        ushort port = 5000;
+        if(udp)
+        {
+            
+            udp.address = ip;
+            udp.serverPort = port;
+            if(instance)
+            {
+                udp.StartServer();
+                C_NetworkUtils.StartPingResponder(5001);
+            }
+            udp.StartClient();
+        }
+    }
+
     protected override void OnSpawned()
     {
         base.OnSpawned(); //Appel de la fonction de base dans le cas d'une intialisation interne
         blackBoard = FindFirstObjectByType<NI_Display_Unit>();
-        
-        
+       
+    
         if(isServer)
         {
-            instance = FindFirstObjectByType<Singleton>();
             timer = GetComponent<NI_Timer>();
             
             //SetUp des infos choisis par l'utilisateur
@@ -56,7 +77,11 @@ public class NI_GameManager : NetworkIdentity
                 }
 
                 timeRemaining = instance.time;
-                if(udp) udp.maxConnections = instance.numParticipants;
+                if(udp) 
+                {
+                    udp.maxConnections = instance.numParticipants;
+                    Debug.Log(udp.address + " " + udp.serverPort);
+                }
             }
             else //settings sans le singleton pour le debug.
             {
@@ -93,6 +118,12 @@ public class NI_GameManager : NetworkIdentity
         }
         if(blackBoard)
             blackBoard.InitDisplay(title,description);
+        
+    }
+
+    void ODestroy()
+    {
+        C_NetworkUtils.StopPingResponder();
     }
 
     [ServerOnly]
@@ -155,11 +186,10 @@ public class NI_GameManager : NetworkIdentity
         {
             processedCurrent = false; // On reset processed
 
-            Debug.Log("Fin du Deck");
             resetPlayerValue();
 
             title.value ="FIN";
-            description.value = "";
+            description.value = "Fichier sauvegardé";
             blackBoard.ChangeDisplay(title,description); // On actualise l'affichage tableau
         }
     }
@@ -238,17 +268,18 @@ public class NI_GameManager : NetworkIdentity
         {
             case Singleton.GameMode.Unanimity :
                 string firstAnswer =  answers[0];
+                selectedAnswer = firstAnswer;
                 for(int i = 1; i < answers.Count; i++)
                 {
                     if(answers[i] != firstAnswer)
                     {
                         selectedAnswer =  "Pas unanime";
                         notAnswered = true;
-                        return selectedAnswer;
+                        break;
                     }
                 }
-                selectedAnswer = firstAnswer;
-                deck.usdata_list[compteurItem].score = float.Parse(firstAnswer);
+                if(!notAnswered)
+                    deck.usdata_list[compteurItem].score = float.Parse(firstAnswer);
                 break;
             case Singleton.GameMode.Average :
                 float result = 0.0f;
@@ -258,6 +289,7 @@ public class NI_GameManager : NetworkIdentity
                 }
                 result/= answers.Count;
                 selectedAnswer = result.ToString();
+                deck.usdata_list[compteurItem].score = result;
                 break;
             case Singleton.GameMode.Median :
                 List<float> values = new List<float>();
@@ -276,6 +308,56 @@ public class NI_GameManager : NetworkIdentity
                     median = (values[n / 2 - 1] + values[n / 2]) / 2f;
 
                 selectedAnswer = median.ToString();
+                deck.usdata_list[compteurItem].score = median;                
+                break;
+            case Singleton.GameMode.AbsMajority :
+                string candidate = answers[0];
+                int count = 0;
+                for(int i = 0; i < answers.Count; i++)
+                {
+                    if(answers[i] == candidate)
+                        count++;
+                    else 
+                        count--;
+                    if(count == 0)
+                        candidate = answers[i];
+                }
+                selectedAnswer = candidate;
+                deck.usdata_list[compteurItem].score = int.Parse(candidate);                
+                break;
+            case Singleton.GameMode.RelMajority :
+                int[] numbers = new int[] {0,1,2,3,5,8,13,20,40,100};
+                int[] votes = new int[numbers.Length];
+                for(int i = 0; i < answers.Count; i++)
+                {
+                    for(int j = 0; j < numbers.Length; j++)
+                    {
+                        if(int.Parse(answers[i])==numbers[j])
+                        {
+                            votes[j]++;
+                            break;
+                        }
+                    }
+                }
+                int value = 0;
+                bool tie =false;
+                for(int i=0; i < votes.Length; i++)
+                {
+                    if(votes[i] > value)
+                    {
+                        value = votes[i];
+                        selectedAnswer = numbers[i].ToString();
+                    }
+                    else if (votes[i]==value && votes[i] > 0)
+                        tie = true;
+                }
+                if(tie)
+                {
+                    selectedAnswer = "Égalité";
+                    notAnswered = true;
+                }
+                else
+                    deck.usdata_list[compteurItem].score = int.Parse(selectedAnswer);                
                 break;
         }
         deck.usdata_list[compteurItem].compteur++;
