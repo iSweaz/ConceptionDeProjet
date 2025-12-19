@@ -47,6 +47,7 @@ var annotated_dup =
     [ "Selection", "classSelection.html", "classSelection" ],
     [ "Singleton", "classSingleton.html", "classSingleton" ],
     [ "T_DisplayBoard", "classT__DisplayBoard.html", "classT__DisplayBoard" ],
+    [ "T_GameModes", "classT__GameModes.html", "classT__GameModes" ],
     [ "T_USData", "classT__USData.html", "classT__USData" ],
     [ "T_USJsonFile", "classT__USJsonFile.html", "classT__USJsonFile" ],
     [ "test", "classtest.html", "classtest" ],

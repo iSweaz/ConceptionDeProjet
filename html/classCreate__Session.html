@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('classCreate__Session.html',''); initRe
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classCreate__Session-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Create_Session Class Reference</div></div>
 </div><!--header-->
@@ -110,6 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeae581eed3c9222e2abd4173a9a5b00a" id="r_aeae581eed3c9222e2abd4173a9a5b00a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#aeae581eed3c9222e2abd4173a9a5b00a">Load</a> ()</td></tr>
 <tr class="memdesc:aeae581eed3c9222e2abd4173a9a5b00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet de charger la meeting room.  <br /></td></tr>
 <tr class="separator:aeae581eed3c9222e2abd4173a9a5b00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2698dd54c631ce97bb93a60844e858e1" id="r_a2698dd54c631ce97bb93a60844e858e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#a2698dd54c631ce97bb93a60844e858e1">LoadOld</a> ()</td></tr>
+<tr class="separator:a2698dd54c631ce97bb93a60844e858e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71d0ca114c5443af35e2ce270a9512c2" id="r_a71d0ca114c5443af35e2ce270a9512c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#a71d0ca114c5443af35e2ce270a9512c2">CreateDeck</a> ()</td></tr>
 <tr class="memdesc:a71d0ca114c5443af35e2ce270a9512c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d�clench�e quand l'utilisateur clique sur le button "Create Deck". Cr�e un fichier JSon � l'endroit choisi.  <br /></td></tr>
 <tr class="separator:a71d0ca114c5443af35e2ce270a9512c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,6 +122,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a352c01363e830fd8b7e033b94c94970a" id="r_a352c01363e830fd8b7e033b94c94970a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#a352c01363e830fd8b7e033b94c94970a">ImportDeck</a> ()</td></tr>
 <tr class="memdesc:a352c01363e830fd8b7e033b94c94970a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d�clench�e lorsque l'utilisateur clique sur le button "Import Deck". Charge un .JSON, actualise la preview de deck et passe les donn�es charg�es au <a class="el" href="classSingleton.html">Singleton</a>.  <br /></td></tr>
 <tr class="separator:a352c01363e830fd8b7e033b94c94970a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a30c0602bdc00162fb99b5497d468060f" id="r_a30c0602bdc00162fb99b5497d468060f"><td class="memItemLeft" align="right" valign="top">TMP_InputField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#a30c0602bdc00162fb99b5497d468060f">pseudo</a></td></tr>
+<tr class="separator:a30c0602bdc00162fb99b5497d468060f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20a9cdac1fb6f56e07da12fad022c47" id="r_ae20a9cdac1fb6f56e07da12fad022c47"><td class="memItemLeft" align="right" valign="top">TMP_InputField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#ae20a9cdac1fb6f56e07da12fad022c47">sizeSession</a></td></tr>
+<tr class="separator:ae20a9cdac1fb6f56e07da12fad022c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591e030427b40c8f9ef2af30fb01c0d6" id="r_a591e030427b40c8f9ef2af30fb01c0d6"><td class="memItemLeft" align="right" valign="top">TMP_InputField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCreate__Session.html#a591e030427b40c8f9ef2af30fb01c0d6">time</a></td></tr>
+<tr class="separator:a591e030427b40c8f9ef2af30fb01c0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Mono-behavior qui g�re l'�cran de cr�ation de session. </p>
@@ -204,6 +216,31 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2698dd54c631ce97bb93a60844e858e1" name="a2698dd54c631ce97bb93a60844e858e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2698dd54c631ce97bb93a60844e858e1">&#9670;&#160;</a></span>LoadOld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Create_Session.LoadOld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6f445843ed80974f1ab2df24504e9ec9" name="a6f445843ed80974f1ab2df24504e9ec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f445843ed80974f1ab2df24504e9ec9">&#9670;&#160;</a></span>ModifyDeck()</h2>
 
@@ -228,6 +265,49 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fonction d�clench�e quand l'utilisateur clique sur Modify deck. Ouvre la sc�ne de gestion de deck. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a30c0602bdc00162fb99b5497d468060f" name="a30c0602bdc00162fb99b5497d468060f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c0602bdc00162fb99b5497d468060f">&#9670;&#160;</a></span>pseudo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_InputField Create_Session.pseudo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae20a9cdac1fb6f56e07da12fad022c47" name="ae20a9cdac1fb6f56e07da12fad022c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20a9cdac1fb6f56e07da12fad022c47">&#9670;&#160;</a></span>sizeSession</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_InputField Create_Session.sizeSession</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a591e030427b40c8f9ef2af30fb01c0d6" name="a591e030427b40c8f9ef2af30fb01c0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591e030427b40c8f9ef2af30fb01c0d6">&#9670;&#160;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_InputField Create_Session.time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

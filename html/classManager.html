@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('classManager.html',''); initResizable(
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classManager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Manager Class Reference</div></div>
@@ -114,6 +115,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea28223e62c661b3fdaa32ff1273ce33" id="r_aea28223e62c661b3fdaa32ff1273ce33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classManager.html#aea28223e62c661b3fdaa32ff1273ce33">onNextButtonClicked</a> ()</td></tr>
 <tr class="memdesc:aea28223e62c661b3fdaa32ff1273ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui réagit au clic sur le bouton Next.  <br /></td></tr>
 <tr class="separator:aea28223e62c661b3fdaa32ff1273ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af4bffd4f9f7919b84f3373113f0e71dc" id="r_af4bffd4f9f7919b84f3373113f0e71dc"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classManager.html#af4bffd4f9f7919b84f3373113f0e71dc">ProcessAnswerByGameMode</a> (<a class="el" href="classSingleton.html#a672bd24335be16fc167c7906e5cfb01b">Singleton.GameMode</a> gameMode, List&lt; string &gt; answers)</td></tr>
+<tr class="separator:af4bffd4f9f7919b84f3373113f0e71dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e0f403fa63f07be6e5eed449221306d" id="r_a5e0f403fa63f07be6e5eed449221306d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classManager.html#a5e0f403fa63f07be6e5eed449221306d">ProcessGameMode_Unanimity</a> (List&lt; string &gt; answers)</td></tr>
+<tr class="memdesc:a5e0f403fa63f07be6e5eed449221306d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui process la liste des réponses si le game mode est set à "Unanimity".  <br /></td></tr>
+<tr class="separator:a5e0f403fa63f07be6e5eed449221306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb1eb776c8ee00895885e99478f9ebd" id="r_a3fb1eb776c8ee00895885e99478f9ebd"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classManager.html#a3fb1eb776c8ee00895885e99478f9ebd">ProcessGameMode_Average</a> (List&lt; string &gt; answers)</td></tr>
+<tr class="memdesc:a3fb1eb776c8ee00895885e99478f9ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui process la liste des réponses si le game mode est set à "Average".  <br /></td></tr>
+<tr class="separator:a3fb1eb776c8ee00895885e99478f9ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798bb0a8899a6d312ce1cbc65d2dca34" id="r_a798bb0a8899a6d312ce1cbc65d2dca34"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classManager.html#a798bb0a8899a6d312ce1cbc65d2dca34">ProcessGameMode_Median</a> (List&lt; string &gt; answers)</td></tr>
+<tr class="memdesc:a798bb0a8899a6d312ce1cbc65d2dca34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui process la liste des réponses si le game mode est set à "Median".  <br /></td></tr>
+<tr class="separator:a798bb0a8899a6d312ce1cbc65d2dca34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -182,6 +197,155 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fonction qui réagit au clic sur le bouton Start. </p>
+
+</div>
+</div>
+<a id="af4bffd4f9f7919b84f3373113f0e71dc" name="af4bffd4f9f7919b84f3373113f0e71dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bffd4f9f7919b84f3373113f0e71dc">&#9670;&#160;</a></span>ProcessAnswerByGameMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Manager.ProcessAnswerByGameMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSingleton.html#a672bd24335be16fc167c7906e5cfb01b">Singleton::GameMode</a>&#160;</td>
+          <td class="paramname"><em>gameMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>answers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameMode</td><td></td></tr>
+    <tr><td class="paramname">answers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a3fb1eb776c8ee00895885e99478f9ebd" name="a3fb1eb776c8ee00895885e99478f9ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fb1eb776c8ee00895885e99478f9ebd">&#9670;&#160;</a></span>ProcessGameMode_Average()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Manager.ProcessGameMode_Average </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>answers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction qui process la liste des réponses si le game mode est set à "Average". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">answers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a798bb0a8899a6d312ce1cbc65d2dca34" name="a798bb0a8899a6d312ce1cbc65d2dca34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a798bb0a8899a6d312ce1cbc65d2dca34">&#9670;&#160;</a></span>ProcessGameMode_Median()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Manager.ProcessGameMode_Median </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>answers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction qui process la liste des réponses si le game mode est set à "Median". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">answers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a5e0f403fa63f07be6e5eed449221306d" name="a5e0f403fa63f07be6e5eed449221306d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e0f403fa63f07be6e5eed449221306d">&#9670;&#160;</a></span>ProcessGameMode_Unanimity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string Manager.ProcessGameMode_Unanimity </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>answers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction qui process la liste des réponses si le game mode est set à "Unanimity". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">answers</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
