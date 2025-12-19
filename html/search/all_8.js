@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['icon_0',['icon',['../structSimpleFileBrowser_1_1FiletypeIcon.html#a6a21a43685212880e29dd8f05186b5b9',1,'SimpleFileBrowser.FiletypeIcon.icon'],['../classSimpleFileBrowser_1_1FileBrowserItem.html#a06468aa5b579ab38e921b19dc398bc32',1,'SimpleFileBrowser.FileBrowserItem.Icon']]],
+  ['icon_0',['icon',['../classSimpleFileBrowser_1_1FileBrowserItem.html#a06468aa5b579ab38e921b19dc398bc32',1,'SimpleFileBrowser.FileBrowserItem.Icon'],['../structSimpleFileBrowser_1_1FiletypeIcon.html#a6a21a43685212880e29dd8f05186b5b9',1,'SimpleFileBrowser.FiletypeIcon.icon']]],
   ['ilistviewadapter_1',['IListViewAdapter',['../interfaceSimpleFileBrowser_1_1IListViewAdapter.html',1,'SimpleFileBrowser']]],
   ['ilistviewadapter_2ecs_2',['IListViewAdapter.cs',['../IListViewAdapter_8cs.html',1,'']]],
   ['importdeck_3',['ImportDeck',['../classCreate__Session.html#a352c01363e830fd8b7e033b94c94970a',1,'Create_Session']]],

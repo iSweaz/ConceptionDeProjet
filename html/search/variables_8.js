@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['menuscene_0',['menuScene',['../classMB__CreateDeckManager.html#a8d9cd8f5646420c38ae3ed1391fb4396',1,'MB_CreateDeckManager']]]
+  ['join_0',['join',['../classMB__Start.html#ae4861f302f2b47baa25f608a1a2deb3f',1,'MB_Start']]]
 ];
