@@ -177,6 +177,99 @@ public class Manager : MonoBehaviour
         return median.ToString();
     }
 
+    /// <summary>
+    /// Fonction qui process la liste des réponses si le game mode est set à "Majorité absolue"
+    /// </summary>
+    /// <param name="answers"></param>
+    /// <returns></returns>
+    public static string ProcessGameMode_AbsMaj(List<string> answers)
+    {
+        // On initialise count & options
+        List<string> Options = new List<string>();
+        List<int> Count = new List<int>();
+        for (int i = 0; i < answers.Count; i++)
+        {
+            string _answer = answers[i];
+            if (!Options.Contains(_answer))
+            {
+                Options.Add(_answer);
+                Count.Add(1);
+            }
+            else
+            {
+                int _place = Options.IndexOf(_answer);
+                Count[_place]++;
+            }
+        }
+
+        // On regarde s'il y a majorité absolue
+        int _findHigher = 0;
+        int _higherValue = 0;
+        for (int i = 0; i < Count.Count; i++)
+        {
+            if (Count[i] >= _higherValue)
+            {
+                _findHigher = i;
+                _higherValue = Count[i];
+            }
+        }
+
+        // On regarde si tot value des autres > higher
+        int _totValueLesser = 0;
+        for (int i = 0; i < Count.Count; i++)
+        {
+            if (i == _findHigher) continue; // On ignore celui choisi
+            _totValueLesser += Count[i];
+        }
+
+        if (_totValueLesser < _higherValue) return Options[_findHigher];
+        else return "Pas de majorité absolue";
+    }
+
+    /// <summary>
+    /// Fonction qui process la liste des réponses si le game mode est set à "Majorité relative"
+    /// </summary>
+    /// <param name="answers"></param>
+    /// <returns></returns>
+    public static string ProcessGameMode_RelMaj(List<string> answers)
+    {
+        string selectedAnswer = "0";
+        int[] numbers = new int[] { 0, 1, 2, 3, 5, 8, 13, 20, 40, 100 };
+        int[] votes = new int[numbers.Length];
+        for (int i = 0; i < answers.Count; i++)
+        {
+            for (int j = 0; j < numbers.Length; j++)
+            {
+                if (int.Parse(answers[i]) == numbers[j])
+                {
+                    votes[j]++;
+                    break;
+                }
+            }
+        }
+        int value = 0;
+        bool tie = false;
+        for (int i = 0; i < votes.Length; i++)
+        {
+            if (votes[i] > value)
+            {
+                value = votes[i];
+                selectedAnswer = numbers[i].ToString();
+                tie = false;
+            }
+            else if (votes[i] == value && votes[i] > 0)
+                tie = true;
+        }
+        if (tie)
+        {
+            return "Égalité";
+        }
+        else
+        {
+            return selectedAnswer;
+        }
+    }
+
     #endregion
 
     /// <summary>

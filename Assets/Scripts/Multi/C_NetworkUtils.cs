@@ -73,6 +73,10 @@ public static class C_NetworkUtils
     private static UdpClient pingListener;
     private static Thread pingThread;
 
+    /// <summary>
+    /// Ouvre un port pour établir la communication
+    /// </summary>
+    /// <param name="pingPort">Numéro du port</param>
     public static void StartPingResponder(int pingPort = 5000)
     {
         pingListener = new UdpClient(pingPort);
@@ -108,6 +112,9 @@ public static class C_NetworkUtils
         pingThread.Start();
     }
 
+    /// <summary>
+    /// Ferme un port
+    /// </summary>
     public static void StopPingResponder()
     {
         if(pingThread != null && pingThread.IsAlive)

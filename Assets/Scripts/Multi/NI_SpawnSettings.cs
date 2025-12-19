@@ -7,6 +7,9 @@ public class NI_SpawnSettings : NetworkIdentity
     [SerializeField] private AudioListener audioListener;
     [SerializeField] private NI_Selection selection;
 
+    /// <summary>
+    /// Création de la meeting room pour le host
+    /// </summary>
     protected override void OnSpawned()
     {
         base.OnSpawned();

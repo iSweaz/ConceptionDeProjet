@@ -1,7 +1,5 @@
 using PurrNet;
 using UnityEngine;
-using System.Linq;
-
 
 public class NI_Selection : NetworkIdentity
 {
@@ -17,7 +15,7 @@ public class NI_Selection : NetworkIdentity
 
     }
 
-    void  Update()
+    void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
@@ -25,6 +23,9 @@ public class NI_Selection : NetworkIdentity
         }
     }
 
+    /// <summary>
+    /// Crée un laser vers des coordonnées dans le monde 3D
+    /// </summary>
     void RayCast()
     {
         RaycastHit hit;
@@ -39,7 +40,10 @@ public class NI_Selection : NetworkIdentity
         }
     }
 
-    //[ObserversRpc] // pas nécessaire puisque les autres joueurs ne voient pas mais c'est pour mes test ^^
+    /// <summary>
+    /// Change la couleur de la carte sélectionnée ou désélectionnée
+    /// </summary>
+    /// <param name="gameObject">Carte</param>
     public void ChangeColor(GameObject gameObject)
     {
         Renderer render;
@@ -57,13 +61,19 @@ public class NI_Selection : NetworkIdentity
         }        
     }
 
+    /// <summary>
+    /// Informe le serveur d'un changement de réponse
+    /// </summary>
+    /// <param name="newAnswer">Nouvelle réponse sélectionnée</param>
     [ServerRpc]
     void ChangeAnwser(string newAnswer)
     {
         answer = newAnswer;
     }
     
-
+    /// <summary>
+    /// Remet la réponse par défaut "i"
+    /// </summary>
     [ObserversRpc]
     public void resetValue()
     {

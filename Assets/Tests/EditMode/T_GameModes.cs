@@ -14,10 +14,8 @@ public class T_GameModes
         List<string> testError = new List<string>() { "1", "100", "8", "3" };
         string retCoffee = Manager.ProcessAnswerByGameMode(Singleton.GameMode.Unanimity, testCoffee);
         string retUnknown = Manager.ProcessAnswerByGameMode(Singleton.GameMode.Unanimity, testUnknown);
-        string retError = Manager.ProcessAnswerByGameMode(Singleton.GameMode.RelMajority, testError);
         Assert.AreEqual("Quelqu'un demande une pause", retCoffee);
         Assert.AreEqual("Quelqu'un n'a pas compris la tache", retUnknown);
-        Assert.AreEqual("Erreur : GameMode non pris en charge.", retError);
     }
 
     /// <summary>
@@ -57,5 +55,30 @@ public class T_GameModes
         string repuneven = Manager.ProcessGameMode_Median(testuneven);
         Assert.AreEqual("3", repeven);
         Assert.AreEqual("2", repuneven);
+    }
+
+    /// <summary>
+    /// Test du calcul de la réponse dans le mode de jeu Majorité absolue
+    /// </summary>
+    [Test]
+    public void T_AbsMaj()
+    {
+        List<string> testeven = new List<string>() { "3", "3", "5", "3" };
+        string repeven = Manager.ProcessGameMode_AbsMaj(testeven);
+        List<string> testuneven = new List<string>() { "1", "2", "5", "3", "2" };
+        string repuneven = Manager.ProcessGameMode_AbsMaj(testuneven);
+        Assert.AreEqual("3", repeven);
+        Assert.AreEqual("Pas de majorité absolue", repuneven);
+    }
+
+    /// <summary>
+    /// Test du calcul de la réponse dans le mode de jeu Majorité relative
+    /// </summary>
+    [Test]
+    public void T_RelMaj()
+    {
+        List<string> test = new List<string>() { "1", "2", "5", "3", "2" };
+        string rep = Manager.ProcessGameMode_RelMaj(test);
+        Assert.AreEqual("2", rep);
     }
 }

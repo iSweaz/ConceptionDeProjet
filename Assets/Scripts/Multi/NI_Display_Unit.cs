@@ -1,7 +1,3 @@
-using UnityEngine;
-using System.Collections;
-
-//packagage :
 using TMPro;
 using PurrNet;
 
@@ -20,15 +16,20 @@ public class NI_Display_Unit : NetworkIdentity
   /// <summary>
   /// Actualise le contenu affiché au tableau
   /// </summary>
-  /// <param name="title">titre de la user story actuel</param>
-  /// <param name="description">description de la user story actuel</param>
+  /// <param name="title">titre de la user story actuelle</param>
+  /// <param name="description">description de la user story actuelle</param>
   [ObserversRpc]
   public void ChangeDisplay(string title, string description)
   {
     nameText.text = title;
     descText.text = description;
   }
-
+   
+/// <summary>
+/// Initialise le contenu affiché au tableau
+/// </summary>
+/// <param name="title">titre de la première user story</param>
+/// <param name="description">description de la première user story</param>
   public void InitDisplay(string title, string description)
   {
     nameText.text = title;

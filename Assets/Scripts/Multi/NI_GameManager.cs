@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using PurrNet;
 using PurrNet.Transports;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +18,6 @@ public class NI_GameManager : NetworkIdentity
 
     Singleton instance;
     public UDPTransport udp;
-    bool server = true;
     #region Deck
         [Header("Deck")]
         [SerializeField] public USJsonFile deck;
@@ -56,6 +53,9 @@ public class NI_GameManager : NetworkIdentity
         }
     }
 
+    /// <summary>
+    /// Initialise la salle en fonction des paramètres de la session
+    /// </summary>
     protected override void OnSpawned()
     {
         base.OnSpawned(); //Appel de la fonction de base dans le cas d'une intialisation interne
@@ -121,11 +121,6 @@ public class NI_GameManager : NetworkIdentity
         
     }
 
-    void ODestroy()
-    {
-        C_NetworkUtils.StopPingResponder();
-    }
-
     [ServerOnly]
     void Update()
     {
@@ -136,6 +131,9 @@ public class NI_GameManager : NetworkIdentity
         restartButton.gameObject.SetActive((processedCurrent && !timer.timerIsRunning && compteurItem < lengthDeck && !pickingAnAnswer && notAnswered));
     }
 
+    /// <summary>
+    /// Réinitialise la valeur de la réponse de tous les joueurs
+    /// </summary>
     [Server]
     void resetPlayerValue()
     {
@@ -145,6 +143,9 @@ public class NI_GameManager : NetworkIdentity
         }
     }
 
+    /// <summary>
+    /// Récupère les réponses de tous les joueurs
+    /// </summary>
     void GetAnswers()
     {
         answers.Clear();
@@ -155,7 +156,9 @@ public class NI_GameManager : NetworkIdentity
        blackBoard.ChangeDisplay("Valeur retenue :",ProcessAnswerByGameMode(answers)); // On applique le script de procession des différents effets possible
     }
 
-
+    /// <summary>
+    /// Fonction qui s'active quand l'host clique sur le bouton Start : lance le vote de la user story
+    /// </summary>
     public void onStartButtonClicked()
     {
         timer.startTimer(timeRemaining);
@@ -163,7 +166,7 @@ public class NI_GameManager : NetworkIdentity
     }
 
     /// <summary>
-    /// Fonction qui réagit au clic sur le bouton Next
+    /// Fonction qui réagit au clic sur le bouton Next : passe à la prochaine user story
     /// </summary>
     [Server]
     public void onNextButtonClicked()
@@ -194,19 +197,25 @@ public class NI_GameManager : NetworkIdentity
         }
     }
 
+    /// <summary>
+    /// Fonction qui permet d'accepter la pause demandée par la carte café
+    /// </summary>
     public void onCheckMarkButtonCliked()
     {
         foreach(var player in players)
             player.DestroyCoffee();
         Destroy(checkMark.gameObject);
         Destroy(crossMark.gameObject);
-        blackBoard.ChangeDisplay("Aceptée",""); 
+        blackBoard.ChangeDisplay("Acceptée",""); 
 
 
         notAnswered = true;
         pickingAnAnswer = false;
     }
 
+    /// <summary>
+    /// Fonction qui permet de refuser la pause demandée par la carte café
+    /// </summary>
     public void onCrossMarkButtonCliked()
     {
         crossMark.gameObject.SetActive(false);
@@ -311,19 +320,47 @@ public class NI_GameManager : NetworkIdentity
                 deck.usdata_list[compteurItem].score = median;                
                 break;
             case Singleton.GameMode.AbsMajority :
-                string candidate = answers[0];
-                int count = 0;
-                for(int i = 0; i < answers.Count; i++)
+                // On initialise count & options
+                List<string> Options = new List<string>();
+                List<int> Count = new List<int>();
+                for (int i = 0; i < answers.Count; i++)
                 {
-                    if(answers[i] == candidate)
-                        count++;
-                    else 
-                        count--;
-                    if(count == 0)
-                        candidate = answers[i];
+                    string _answer = answers[i];
+                    if (!Options.Contains(_answer))
+                    {
+                        Options.Add(_answer);
+                        Count.Add(1);
+                    }
+                    else
+                    {
+                        int _place = Options.IndexOf(_answer);
+                        Count[_place]++;
+                    }
                 }
-                selectedAnswer = candidate;
-                deck.usdata_list[compteurItem].score = int.Parse(candidate);                
+
+                // On regarde s'il y a majorité absolue
+                int _findHigher = 0;
+                int _higherValue = 0;
+                for (int i = 0; i < Count.Count; i++)
+                {
+                    if (Count[i] >= _higherValue)
+                    {
+                        _findHigher = i;
+                        _higherValue = Count[i];
+                    }
+                }
+
+                // On regarde si tot value des autres > higher
+                int _totValueLesser = 0;
+                for (int i = 0; i < Count.Count; i++)
+                {
+                    if (i == _findHigher) continue; // On ignore celui choisi
+                    _totValueLesser += Count[i];
+                }
+
+                if (_totValueLesser < _higherValue) selectedAnswer = Options[_findHigher];
+                else selectedAnswer = "Pas de majorité absolue";
+                deck.usdata_list[compteurItem].score = int.Parse(selectedAnswer);    
                 break;
             case Singleton.GameMode.RelMajority :
                 int[] numbers = new int[] {0,1,2,3,5,8,13,20,40,100};
@@ -347,6 +384,7 @@ public class NI_GameManager : NetworkIdentity
                     {
                         value = votes[i];
                         selectedAnswer = numbers[i].ToString();
+                        tie = false;
                     }
                     else if (votes[i]==value && votes[i] > 0)
                         tie = true;

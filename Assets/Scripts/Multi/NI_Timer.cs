@@ -54,13 +54,16 @@ public class NI_Timer : NetworkIdentity
     /// <summary>
     /// Fonction qui lance le timer
     /// </summary>
-    /// <param name="timeRemaining"></param>
+    /// <param name="timeRemaining">valeur du chronomètre au lancement</param>
     public void startTimer(float timeRemaining)
     {
         timerIsRunning = true;
         this.timeRemaining.value = timeRemaining;
     }
 
+    /// <summary>
+    /// Fonction qui arrête le timer
+    /// </summary>
     [ObserversRpc]
     public void stopTimer()
     {
@@ -68,11 +71,18 @@ public class NI_Timer : NetworkIdentity
         timeText.text = ""; // On reset le texte
     }
 
+    /// <summary>
+    /// Fonction qui active le timer
+    /// </summary>
     public void launchTimer()
     {
         timerIsRunning = true;
     }
 
+    /// <summary>
+    /// Fonction qui affiche le temps
+    /// </summary>
+    /// <param name="timeToDisplay">Temps à afficher</param>
     [ObserversRpc]
     public void DisplayTime(float timeToDisplay)
     {    
@@ -83,6 +93,9 @@ public class NI_Timer : NetworkIdentity
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
     
+    /// <summary>
+    /// Fonction qui crée le canva qui contient le timer
+    /// </summary>
     public void createCanvas()
     {
         GameObject canvasGO = new GameObject("RuntimeCanvas");

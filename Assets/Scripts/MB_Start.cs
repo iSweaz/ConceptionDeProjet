@@ -7,8 +7,6 @@ public class MB_Start : MonoBehaviour
     public Button create,join;
     void Start()
     {
-        Debug.Log("Feur");
-
         create.gameObject.SetActive(false);
         join.gameObject.SetActive(false);
         if(C_NetworkUtils.IsServerRunning(C_NetworkUtils.GetLocalIP(),5001))
@@ -24,7 +22,6 @@ public class MB_Start : MonoBehaviour
 
     public void OnCreateCliked()
     {
-        Debug.Log("Feur");
         SceneManager.LoadScene("Menu");
     }
 }
