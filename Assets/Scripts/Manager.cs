@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
 {
     public USJsonFile deck;
     public Button nextButton, startButton;
-    private Display_Unit blackBoard;
+    public Display_Unit blackBoard;
     private Timer timer;
     Singleton instance;
     bool processedCurrent = false;
@@ -37,6 +37,7 @@ public class Manager : MonoBehaviour
         // blackBoard.ChangeDisplay(compteurItem);
 
         timer = FindFirstObjectByType<Timer>();
+        timeRemaining = instance.time;
         //timer.startTimer(timeRemaining);
 
         player = FindFirstObjectByType<Selection>();
