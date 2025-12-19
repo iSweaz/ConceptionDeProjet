@@ -105,3 +105,4 @@ https://isweaz.github.io/ConceptionDeProjet/html/index.html
 
 ## Autres 
 Le mode de jeu Majorité absolue n'est pas fonctionnel.
+Les scripts et le projet en lui même se trouve sur la branch **Develop**
