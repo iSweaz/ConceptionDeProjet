@@ -13,8 +13,10 @@ var searchData=
   ['position_10',['Position',['../classSimpleFileBrowser_1_1ListItem.html#acf66424b18240f38f133eab4ef5680bb',1,'SimpleFileBrowser::ListItem']]],
   ['prefabus_11',['prefabUs',['../classMB__CreateDeckManager.html#a0e03db6a88166f85d6b66409eef06faf',1,'MB_CreateDeckManager']]],
   ['processanswerbygamemode_12',['ProcessAnswerByGameMode',['../classManager.html#af4bffd4f9f7919b84f3373113f0e71dc',1,'Manager']]],
-  ['processgamemode_5faverage_13',['ProcessGameMode_Average',['../classManager.html#a3fb1eb776c8ee00895885e99478f9ebd',1,'Manager']]],
-  ['processgamemode_5fmedian_14',['ProcessGameMode_Median',['../classManager.html#a798bb0a8899a6d312ce1cbc65d2dca34',1,'Manager']]],
-  ['processgamemode_5funanimity_15',['ProcessGameMode_Unanimity',['../classManager.html#a5e0f403fa63f07be6e5eed449221306d',1,'Manager']]],
-  ['pseudo_16',['pseudo',['../classCreate__Session.html#a30c0602bdc00162fb99b5497d468060f',1,'Create_Session']]]
+  ['processgamemode_5fabsmaj_13',['ProcessGameMode_AbsMaj',['../classManager.html#a971a8a3ce6ece43a9c2521f193532296',1,'Manager']]],
+  ['processgamemode_5faverage_14',['ProcessGameMode_Average',['../classManager.html#a3fb1eb776c8ee00895885e99478f9ebd',1,'Manager']]],
+  ['processgamemode_5fmedian_15',['ProcessGameMode_Median',['../classManager.html#a798bb0a8899a6d312ce1cbc65d2dca34',1,'Manager']]],
+  ['processgamemode_5frelmaj_16',['ProcessGameMode_RelMaj',['../classManager.html#a52cac35558fe0f8674418e9a8f88bfcd',1,'Manager']]],
+  ['processgamemode_5funanimity_17',['ProcessGameMode_Unanimity',['../classManager.html#a5e0f403fa63f07be6e5eed449221306d',1,'Manager']]],
+  ['pseudo_18',['pseudo',['../classCreate__Session.html#a30c0602bdc00162fb99b5497d468060f',1,'Create_Session']]]
 ];

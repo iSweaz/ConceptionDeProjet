@@ -107,13 +107,16 @@ Inheritance diagram for NI_GameManager:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab37d42b1cd41e22472684839ea697981" id="r_ab37d42b1cd41e22472684839ea697981"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__GameManager.html#ab37d42b1cd41e22472684839ea697981">onStartButtonClicked</a> ()</td></tr>
+<tr class="memdesc:ab37d42b1cd41e22472684839ea697981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui s'active quand l'host clique sur le bouton Start : lance le vote de la user story.  <br /></td></tr>
 <tr class="separator:ab37d42b1cd41e22472684839ea697981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b673e7fc5e76d04cf3483071b547720" id="r_a9b673e7fc5e76d04cf3483071b547720"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__GameManager.html#a9b673e7fc5e76d04cf3483071b547720">onNextButtonClicked</a> ()</td></tr>
-<tr class="memdesc:a9b673e7fc5e76d04cf3483071b547720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui réagit au clic sur le bouton Next.  <br /></td></tr>
+<tr class="memdesc:a9b673e7fc5e76d04cf3483071b547720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui réagit au clic sur le bouton Next : passe à la prochaine user story.  <br /></td></tr>
 <tr class="separator:a9b673e7fc5e76d04cf3483071b547720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a148e13e437495074f28fbb83856a152f" id="r_a148e13e437495074f28fbb83856a152f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__GameManager.html#a148e13e437495074f28fbb83856a152f">onCheckMarkButtonCliked</a> ()</td></tr>
+<tr class="memdesc:a148e13e437495074f28fbb83856a152f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'accepter la pause demandée par la carte café  <br /></td></tr>
 <tr class="separator:a148e13e437495074f28fbb83856a152f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2ec20cdd0ddad842e18242da7322b4" id="r_a2c2ec20cdd0ddad842e18242da7322b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__GameManager.html#a2c2ec20cdd0ddad842e18242da7322b4">onCrossMarkButtonCliked</a> ()</td></tr>
+<tr class="memdesc:a2c2ec20cdd0ddad842e18242da7322b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet de refuser la pause demandée par la carte café  <br /></td></tr>
 <tr class="separator:a2c2ec20cdd0ddad842e18242da7322b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aced9dfac281f48e6173ab1512ad8302e" id="r_aced9dfac281f48e6173ab1512ad8302e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__GameManager.html#aced9dfac281f48e6173ab1512ad8302e">onRestartButtonCliked</a> ()</td></tr>
 <tr class="memdesc:aced9dfac281f48e6173ab1512ad8302e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relance la US précédente.  <br /></td></tr>
@@ -145,6 +148,7 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2c3ce4db97a423272a8f02f1cd812699" id="r_a2c3ce4db97a423272a8f02f1cd812699"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNI__GameManager.html#a2c3ce4db97a423272a8f02f1cd812699">OnSpawned</a> ()</td></tr>
+<tr class="memdesc:a2c3ce4db97a423272a8f02f1cd812699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise la salle en fonction des paramètres de la session.  <br /></td></tr>
 <tr class="separator:a2c3ce4db97a423272a8f02f1cd812699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -171,6 +175,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Fonction qui permet d'accepter la pause demandée par la carte café </p>
+
 </div>
 </div>
 <a id="a2c2ec20cdd0ddad842e18242da7322b4" name="a2c2ec20cdd0ddad842e18242da7322b4"></a>
@@ -195,6 +201,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Fonction qui permet de refuser la pause demandée par la carte café </p>
 
 </div>
 </div>
@@ -221,7 +229,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fonction qui réagit au clic sur le bouton Next. </p>
+<p>Fonction qui réagit au clic sur le bouton Next : passe à la prochaine user story. </p>
 
 </div>
 </div>
@@ -275,6 +283,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialise la salle en fonction des paramètres de la session. </p>
+
 </div>
 </div>
 <a id="ab37d42b1cd41e22472684839ea697981" name="ab37d42b1cd41e22472684839ea697981"></a>
@@ -299,6 +309,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Fonction qui s'active quand l'host clique sur le bouton Start : lance le vote de la user story. </p>
 
 </div>
 </div>
